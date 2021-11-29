@@ -6,7 +6,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
   <img src="assets/saudex.png" alt="saudex_image" width="500">
 </h1>
 
-<p align="center" style="font-weight: bold; font-size: 25px"> Origem da API Saudex</p>
+<p align="center" style="font-weight: bold; font-size: 35px"> Origem da API Saudex</p>
 
 > O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema do plural da palavra saúdes.
 
@@ -18,7 +18,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 > Como resultado deste período do ano de 2020 à 2021, nasceu o sentimento de impotência, o pesar em não ter a influência necessária para ajudar amenizar o sofrimento daqueles que amamos. Portanto, analisando tudo que aconteceu até o atual momento, realizei a criação da API Saudex, uma inspiração que surgiu através de dor e perda.
 
-<p align="center" style="font-weight: bold; font-size: 25px">Objetivo</p>
+<p align="center" style="font-weight: bold; font-size: 35px">Objetivo</p>
 
 > A API Saudex, possui como o seu principal objetivo a importância de ajudar pessoas diabéticas que fazem uso de insulinas e que tem a necessidade de insumos gratuitos. 
 
@@ -30,18 +30,18 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 > Em resumo, a Saudex foi desenvolvida com o propósito de indicar aos nossos usuários, os quais sofrem com a diabetes, em qual centro médico encontrar, primordialmente, médicos e insumos gratuitamente, que sejam mais próximo de sua residência.
 
-<p align="center" style="font-weight: bold; font-size: 25px">Linguagem Utilizada</p>
+<p align="center" style="font-weight: bold; font-size: 35px">Linguagem Utilizada</p>
 
 <p p align="center"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img></p>
 
-<p align="center" style="font-weight: bold; font-size: 25px">Tecnologias Utilizadas</p>
+<p align="center" style="font-weight: bold; font-size: 35px">Tecnologias Utilizadas</p>
 
 <p  align="center">
 <a  href="https://git-scm.com/"><img  alt="Git version"  src="https://img.shields.io/badge/Git/GitHub-green">
 <a  href="https://nodejs.org/pt-br/"><img  alt="Node version"  src="https://img.shields.io/badge/NodeJS-green">
 <a  href="https://www.mongodb.com/cloud/atlas"><img  alt="Node version"  src="https://img.shields.io/badge/MongoDB%20Atlas-green"></a>
 
-<p align="center" style="font-weight: bold; font-size: 25px">Bibliotecas Utilizadas</p>
+<p align="center" style="font-weight: bold; font-size: 35px">Bibliotecas Utilizadas</p>
 <p  align="center">
 <a  href="https://www.npmjs.com/"><img  alt="npm version"  src="https://img.shields.io/badge/npm-6.14.6-orange">
 <a  href="https://expressjs.com/pt-br/"><img  alt="Express version"  src="https://img.shields.io/badge/express-4.17.1-orange">
