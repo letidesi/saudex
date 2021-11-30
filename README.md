@@ -112,13 +112,13 @@ Dito isto, siga o processo abaixo:
 ## <p align="center" style="font-weight: bold">Aprendizados </p>
 
 <h3> A construção deste projeto final, consiste nesta API fundamentada no CRUD com a integração do banco de dados NoSQL, o MongoDB. 
-
 <br>
-Definindo o que é CRUD: 
-
 <br>
 
-    CREATE (CRIAR)
-    READ (LER, CONSULTAR)
-    UPDATE (ATUALIZAR) 
-    DELETE (DESTRUIÇÃO, REMOÇÃO).
+- Definindo o que é CRUD: 
+    
+
+      CREATE (CRIAR)
+      READ (LER, CONSULTAR)
+      UPDATE (ATUALIZAR) 
+      DELETE (DESTRUIÇÃO, REMOÇÃO).
