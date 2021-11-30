@@ -105,5 +105,6 @@ Dito isto, siga o processo abaixo:
 
       npm start
 
+- Os que fizeram modificações, realize o push das suas alterações e envie uma solicitação de pull request. Para mais informações de comandos, <a href="https://gist.github.com/leocomelli/2545add34e4fec21ec16">clique aqui</a>.
 
 
