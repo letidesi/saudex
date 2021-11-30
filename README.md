@@ -105,6 +105,15 @@ Dito isto, siga o processo abaixo:
 
       npm start
 
-- Os que fizeram modificações, realize o push das suas alterações e envie uma solicitação de pull request. Para mais informações de comandos, <a href="https://gist.github.com/leocomelli/2545add34e4fec21ec16">clique aqui</a>.
+- Os que fizeram modificações, realize o push das suas alterações e envie uma solicitação de pull request. Para mais informações de comandos, <a href="https://gist.github.com/letidesi/47454278dff1f7b666802f3cc4951292">clique aqui</a>.
 
+## <p align="center" style="font-weight: bold">Aprendizados </p>
 
+A construção deste projeto final, consiste nesta API fundamentada no CRUD com a integração do banco de dados NoSQL, o MongoDB. 
+
+Definindo o que é o CRUD: 
+
+    CREATE (CRIAR)
+    READ (LER, CONSULTAR)
+    UPDATE (ATUALIZAR) 
+    DELETE (DESTRUIÇÃO, REMOÇÃO).
