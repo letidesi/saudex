@@ -1,5 +1,6 @@
 On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em desenvolvimento... ✍** 
 
+<img src="assets/saudex.png">
 
 # <h1 align="center" style="font-weight: bold">API - Saudex</h1>
 
@@ -67,7 +68,42 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 </a>
 </p>
 
+## <p align="center" style="font-weight: bold">Instruções de Instalação da API Saudex </p>
 
+<h3> Antes de tudo, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do <a href="https://code.visualstudio.com/download"> Visual Studio Code </a>; E por favor, escolha a versão de acordo com o seu sistema.
+
+Após isso, é necessário realizar também o download e concluir instalação do <a href="https://nodejs.org/en/download/"> Node.js </a>; E novamente, escolha a versão de acordo com o seu sistema. 
+
+Dito isto, siga o processo abaixo:
+
+ - Faça um fork da API Saudex:
+   <img align="center" src="assets/fork.jpg">
+
+ - Na sua área de trabalho, dê um clique no lado esquerdo do mouse ou direito, caso você seja canhota, abra o terminal git bash here:
+
+   <img align="center" src="assets/gitbash.jpg">
+
+- No terminal Git Bash Here, faça o clone da API Saudex:
+
+      git clone https://github.com/letidesi/saudex.git
+
+- Para os que desejam criar modificações no código, crie uma nova branch:
+
+      git checkout -b nome-da-sua-branch
+
+- (Obs: os que não desejarem modificar, não crie uma nova branch, apenas pule para próxima etapa)
+
+- Entre na pasta da API Saudex:
+
+      cd saudex
+
+- Após entrar na pasta da API Saudex, instale todas as depedências:
+
+      npm install ou npm i
+
+- Depois de seguir este processo, você estará apto a executar nossa API, utilize o último comando para finalizar:
+
+      npm start
 
 
 
