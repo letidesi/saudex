@@ -2,11 +2,11 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 # 
 <h1 align="center">
-<p align="center" style="font-size: 40px; font-weight: bold">Saudex</p>
+<p align="center" style="font-size: 200%; font-weight: bold">Saudex</p>
   <img src="assets/saudex.png" alt="saudex_image" width="500">
 </h1>
 
-<p align="center" style="font-size: 38px; font-weight: bold">Origem da API Saudex</p>
+<p align="center" style="font-size: 190%; font-weight: bold">Origem da API Saudex</p>
 
 > O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema do plural da palavra saúdes.
 
