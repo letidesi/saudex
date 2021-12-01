@@ -12,3 +12,6 @@ router.delete("/hospital/delete/:id", controllerHospital.checkToken, controllerH
 
 
 module.exports = router
+
+
+

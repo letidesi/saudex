@@ -70,9 +70,10 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 ## <p align="center" style="font-weight: bold">Instruções de Instalação da API Saudex </p>
 
-<h3> Antes de tudo, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do <a href="https://code.visualstudio.com/download"> Visual Studio Code </a>; E por favor, escolha a versão de acordo com o seu sistema.
+<h3> Antes de tudo, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do <a href="https://code.visualstudio.com/download"> Visual Studio Code </a>. Além disso, para verificar se as modificações foram realizadas com sucesso, deixaremos o link para instalação de um banco de dados NoSQL, de nossa preferência, o <a href="https://www.mongodb.com/try/download/community">MongoDB</a>. E também, deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e comparatilhar APIs, são eles: 
+ o <a href="https://www.postman.com/downloads/">Postman</a> e o <a href="https://insomnia.rest/download">Insomnia</a>; E por favor, escolha a versão de acordo com o seu sistema.
 
-Após isso, é necessário realizar também o download e concluir instalação do <a href="https://nodejs.org/en/download/"> Node.js </a>; E novamente, escolha a versão de acordo com o seu sistema. 
+Após isso, é necessário realizar também o download e concluir instalação do <a href="https://nodejs.org/en/download/"> Node.js</a>; E novamente, escolha a versão de acordo com o seu sistema. 
 
 Dito isto, siga o processo abaixo:
 
@@ -122,3 +123,81 @@ Dito isto, siga o processo abaixo:
       READ (LER, CONSULTAR)
       UPDATE (ATUALIZAR) 
       DELETE (DESTRUIÇÃO, REMOÇÃO).
+
+<br>
+
+## <p align="center" style="font-weight: bold"> Rotas Públicas </p>
+
+    Nome da rota principal = Saudex
+
+|  **_{GET}_** | Retornar |
+| ------------------- | :-------------------: |
+| /search/endocrinologists | Lista de todos os Centros Médicos que possuem endocrinologistas disponíveis.|
+| /search/supplies | Lista de todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
+| /search/attendancepassword | Lista de todos os Centros Médicos que possuem a mesma quantidade de senha de atendimento informada pelo usuário.
+| /search/healthcenter/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo usuário. |
+| /search/hospital/name | Lista todos os Hospitais que possuem o mesmo nome informado pelo usuário. |
+|/search/pharmacy/name| Lista todas as Farmácias que possuem o mesmo nome informado pelo usuário. |
+|/search/healthcenter/municipality| Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo usuário. |
+|/search/hospital/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo usuário. |
+|/search/pharmacy/municipality | Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário.
+
+
+
+## <p align="center" style="font-weight: bold"> Rotas Privadas </p>
+
+     Nome da rota principal = Saudex
+        
+
+| **_{GET}_** | Retornar |
+| ------------------- | :-------------------: |
+| /message | Informar mensagem para administradores. |
+| /adm | Lista todos os Admnistradores cadastrados. |
+| /admin/:id | Procura o Admnistrador do id requisitado pelo Admnistrador logado.|
+| /healthcenter | Lista de todos os Postos de Saúde cadastrados. |
+| /healthcenter/search/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo administrante. |
+|/healthcenter/search/municipality | Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo administrante.  |
+|/healthcenter/search/:id | Procura o Posto de Saúde do id requisitado pelo administrante. |
+| /hospital | Lista de todos os Hospitais cadastrados. |
+| /hospital/search/name | Lista todos os Hospitais que possuem o mesmo nome informado pelo administrante. |
+| /hospital/search/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo admnistrante.  |
+| /hospital/search/:id | Procura Hospital por id requisitado pelo administrante. |
+| /pharmacy | Lista de todas as Farmácias cadastradas. |
+| /pharmacy/search/name | Lista todas as Farmácias que possuem o mesmo nome informado pelo administrante. |
+| /pharmacy/search/municipality | Lista todas as Farmácias que estão localizados no mesmo município informado pelo admnistrante.  |
+| /pharmacy/search/:id | Procura Farmácia por id requisitado pelo administrante.
+
+<br>
+
+<br>
+
+| **_{POST}_** | Retornar |
+| ------------------- | :-------------------: |
+| /register/admin | Cadastrar os administradores. |
+| /login/admin | Realizar login do administrante cadastrado. |
+| /healthcenter/register| Cadastrar os Postos de Saúde. |
+| /hospital/register | Cadastrar os Hospitais. |
+| /pharmacy/register | Cadastrar as Farmácias. |
+
+<br>
+
+<br>
+
+| **_{PUT}_** | Retornar |
+| ------------------- | :-------------------: |
+| /update/admin/:id| Atualizar registros dos administradores. |
+| /healthcenter/update/:id | Atualizar registros dos Postos de Saúde. |
+| /hospital/update/:id| Atualizar registros dos Hospitais. |
+| /pharmacy/update/:id | Atualizar registros das Farmácias. |
+
+<br>
+
+<br>
+
+| **_{DELETE}_** | Retornar |
+| ------------------- | :-------------------: |
+| /delete/admin/:id | Deletar os registros dos administradores. |
+| /healthcenter/delete/:id | Deletar os registros dos Postos de Saúde. |
+| /hospital/delete/:id | Deletar os registros dos Hospitais. |
+| /pharmacy/delete/:id | Deletar os registros das Farmácias. |
+

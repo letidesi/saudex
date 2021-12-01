@@ -11,3 +11,5 @@ router.put("/pharmacy/update/:id", controllerPharmacy.checkToken, controllerPhar
 router.delete("/pharmacy/delete/:id", controllerPharmacy.checkToken, controllerPharmacy.deletePharmacyById);
 
 module.exports = router
+
+

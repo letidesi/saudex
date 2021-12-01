@@ -13,3 +13,4 @@ router.delete("/healthcenter/delete/:id",controllerHealthCenter.checkToken, cont
 
 
 module.exports = router;
+
