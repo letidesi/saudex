@@ -45,7 +45,9 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <br>
 
-## <p align="center" style="font-weight: bold">Funcionalidades</p><hr>
+<hr>
+
+## <p align="center" style="font-weight: bold">Funcionalidades</p> <hr>
                    Rotas Privadas
 
 <h4 align="center" style="font-weight: bold"> {Administradores} </h4>
