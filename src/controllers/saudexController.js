@@ -79,9 +79,114 @@ const searchAllMedicalCentersThatHaveSupplies = async (req, res) => {
   }
 };
 
-const searchForMedicalCentersByNumberOfServiceTickets = async (req, res) => {
+
+
+const searchForQuantityOfDiabetesSuppliesAtTheHospital = async (req, res) => {
+  try {
+    const quantityOfSupplies = await HospitalSchema.find({
+      how_many_supplies_are_available_for_diabetics: req.query.how_many_supplies_are_available_for_diabetics
+    })
+ 
+    if (quantityOfSupplies.length === 0) {
+      return res.status(404).json({
+        message:
+          "Sorry, we have no supplies available at this value, please check if we have higher values.",
+      });
+    }
+    if (
+      req.query.how_many_supplies_are_available_for_diabetics > 0
+    ) {
+      return res.status(200).json({
+        message: `Quantity of diabetes supplies found:`,
+        quantityOfSupplies,
+      });
+    } else {
+      return res.status(404).json({
+        message:
+          "It is only possible to show the quantities of inputs available. Please enter the amount you would like to be verified.",
+      });
+    }
+  } catch (e) {
+    res.status(500).json({
+      message: e.message,
+    });
+  }
+};
+
+
+const searchForQuantityOfDiabetesSuppliesAtTheHealthCenter = async (req, res) => {
+  try {
+    const quantityOfSupplies = await HealthCenterSchema.find({
+      how_many_supplies_are_available_for_diabetics: req.query.how_many_supplies_are_available_for_diabetics
+    })
+ 
+    if (quantityOfSupplies.length === 0) {
+      return res.status(404).json({
+        message:
+          "Sorry, we have no supplies available at this value, please check if we have higher values.",
+      });
+    }
+    if (
+      req.query.how_many_supplies_are_available_for_diabetics > 0
+    ) {
+      return res.status(200).json({
+        message: `Quantity of diabetes supplies found:`,
+        quantityOfSupplies,
+      });
+    } else {
+      return res.status(404).json({
+        message:
+          "It is only possible to show the quantities of inputs available. Please enter the amount you would like to be verified.",
+      });
+    }
+  } catch (e) {
+    res.status(500).json({
+      message: e.message,
+    });
+  }
+};
+
+
+
+const searchForHealthCentersByNumberOfServiceTickets = async (req, res) => {
   try {
     const many_found = await HealthCenterSchema.find({
+      how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist:
+        req.query
+          .how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist,
+    });
+    if (many_found.length === 0) {
+      return res.status(404).json({
+        message:
+          "Sorry, we have no passwords available with this value, please check if we have larger values.",
+      });
+    }
+    if (
+      req.query
+        .how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist >
+      0
+    ) {
+      return res.status(200).json({
+        message: `Passwords were found for attendance:`,
+        many_found,
+      });
+    } else {
+      return res.status(404).json({
+        message:
+          "You can only show available passwords. Please enter the quantity you would like to be verified.",
+      });
+    }
+  } catch (e) {
+    res.status(500).json({
+      message: e.message,
+    });
+  }
+};
+
+
+const searchForHospitalsByNumberOfServiceTickets = async (req, res) => {
+  try {
+    const many_found = await HospitalSchema.find({
       how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist:
         req.query
           .how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist,
@@ -240,14 +345,32 @@ const searchPharmaciesByMunicipality = async (req, res) => {
   }
 };
 
+const findAllPharmacies = async (req, res) => {
+  try {
+    const pharmacy = await PharmacySchema.find();
+    res.status(200).json({
+      message: "All accredited Pharmacies in the 'Popular Pharmacy Program':",
+      pharmacy,
+    });
+  } catch (e) {
+    res.status(500).json({
+      message: e.message,
+    });
+  }
+};
+
 module.exports = {
   searchByAllEndocrinologists,
-  searchAllMedicalCentersThatHaveSupplies,
-  searchForMedicalCentersByNumberOfServiceTickets,
+  searchAllMedicalCentersThatHaveSupplies, 
+  searchForQuantityOfDiabetesSuppliesAtTheHealthCenter,
+  searchForQuantityOfDiabetesSuppliesAtTheHospital,
+  searchForHealthCentersByNumberOfServiceTickets,
+  searchForHospitalsByNumberOfServiceTickets,
   searchAllHealthCentersByName,
   searchAllHospitalsByName,
   searchAllPharmaciesByName,
   searchAllHealthCentersByMunicipality,
   searchAllHospitalsByMunicipality,
   searchPharmaciesByMunicipality,
+  findAllPharmacies
 };

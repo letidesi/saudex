@@ -38,12 +38,73 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <br>
 
-> <h3> Além de, encontrar médicos endocrinologistas, saber a quantidade de médicos disponíveis para estas pessoas e informar as quantidades de senhas disponibilizadas para o atendimento.  
+> <h3> Além de, encontrar médicos endocrinologistas, saber as quantidades de insumos disponíveis para estas pessoas e informar as quantidades de senhas disponibilizadas para o atendimento.  
 <br>
 
-> <h3>  Em resumo, a Saudex foi desenvolvida com o propósito de indicar aos nossos usuários, os quais sofrem com a diabetes, em qual centro médico encontrar, primordialmente, médicos e insumos gratuitamente, que sejam mais próximo de sua residência.
+> <h3>  Em resumo, a Saudex foi desenvolvida com o propósito de indicar aos nossos usuários, os quais sofrem com a diabetes, em qual centro médico encontrar, primordialmente, médicos e insumos gratuitamente, que sejam mais próximo de sua residência, entre outras finalidades.
 
 <br>
+
+## <p align="center" style="font-weight: bold">Funcionalidades</p><hr>
+                   Rotas Privadas
+
+<h4 align="center" style="font-weight: bold"> {Administradores} </h4>
+
+- [X] Cadastrar;
+- [X] Atualizar;
+- [X] Mostrar os registrados;
+- [X] Pesquisar por id;
+- [X] Logar;
+- [X] Remover.
+
+<h4 align="center" style="font-weight: bold"> {Postos de Saúde} </h4>
+
+- [X] Cadastrar;
+- [X] Atualizar;
+- [X] Mostrar os registrados;
+- [X] Pesquisar por id;
+- [X] Pesquisar por nome;
+- [X] Pesquisar por município;
+- [X] Remover.
+
+<h4 align="center" style="font-weight: bold"> {Hospitais} </h4>                               
+
+- [X] Cadastrar;
+- [X] Atualizar;
+- [X] Mostrar os registrados;
+- [X] Pesquisar por id;
+- [X] Pesquisar por nome;
+- [X] Pesquisar por município;
+- [X] Remover.
+
+<h4 align="center" style="font-weight: bold"> {Farmácias} </h4>
+
+- [X] Cadastrar;
+- [X] Atualizar;
+- [X] Mostrar as registradas;
+- [X] Pesquisar por id;
+- [X] Pesquisar por nome;
+- [X] Pesquisar por município;
+- [X] Remover.
+<hr>
+
+                      Rotas Públicas
+<h4 align="center" style="font-weight: bold"> {Saudex} </h4>
+
+- [X] Pesquisar centros médicos que dispõe de endocrinologistas;
+- [X] Pesquisar centros médicos que dispõe de insumos para diabetes;
+- [X] Pesquisar quantidade de insumos para diabtes disponíveis nos Hospitais;
+- [X] Pesquisar quantidade de insumos para diabtes disponíveis nos Postos de Saúde;
+- [X] Pesquisar quantidade de senhas para atendimento nos Postos de Saúde;
+- [X] Pesquisar quantidade de senhas para atendimento nos Hospitais;
+- [X] Pesquisar Postos de Saúde por nome;
+- [X] Pesquisar Hospitais por nome;
+- [X] Pesquisar Farmácias por nome;
+- [X] Pesquisar Postos de Saúde por município;
+- [X] Pesquisar Hospitais por município;
+- [X] Pesquisar Farmácias por município;
+- [X] Mostrar Farmácias credenciadas no "Programa Farmácia Popular".
+
 
 ## <p align="center" style="font-weight: bold">A Linguagem de Programação Executada</p>
 <p p align="center"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img></p>
@@ -132,15 +193,19 @@ Dito isto, siga o processo abaixo:
 
 |  **_{GET}_** | Retornar |
 | ------------------- | :-------------------: |
-| /search/endocrinologists | Lista de todos os Centros Médicos que possuem endocrinologistas disponíveis.|
-| /search/supplies | Lista de todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
-| /search/attendancepassword | Lista de todos os Centros Médicos que possuem a mesma quantidade de senha de atendimento informada pelo usuário.
+| /search/endocrinologists | Lista todos os Centros Médicos que possuem endocrinologistas disponíveis. |
+| /search/supplies | Lista todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
+| /search/healthcenter/quantitysupplies | Lista todos os Postos de Saúdes que possuem a mesma quantidade de insumos informada pelo usuário. |
+| /search/healthcenter/attendancepassword | Lista todos os Postos de Saúdes que possuem a mesma quantidade de senha de atendimento informada pelo usuário. |
 | /search/healthcenter/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo usuário. |
+| /search/hospital/quantitysupplies | Lista todos os Hospitais que possuem a mesma quantidade de insumos informada pelo usuário. |
+| /search/hospital/attendancepassword | Lista todos os Hospitais que possuem a mesma quantidade de senha de atendimento informada pelo usuário.
 | /search/hospital/name | Lista todos os Hospitais que possuem o mesmo nome informado pelo usuário. |
-|/search/pharmacy/name| Lista todas as Farmácias que possuem o mesmo nome informado pelo usuário. |
-|/search/healthcenter/municipality| Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo usuário. |
-|/search/hospital/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo usuário. |
-|/search/pharmacy/municipality | Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário.
+| /pharmacy/popularprogram | Lista todas as Farmácias que são credenciadas no "Programa Farmácia Popular". |
+| /search/pharmacy/name| Lista todas as Farmácias que possuem o mesmo nome informado pelo usuário. |
+| /search/healthcenter/municipality| Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo usuário. |
+| /search/hospital/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo usuário. |
+| /search/pharmacy/municipality | Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário.
 
 
 
