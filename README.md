@@ -55,7 +55,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <hr>
 
-                                       Rotas Privadas
+                                          Rotas Privadas
 
 <h4 align="center" style="font-weight: bold"> {Administradores} </h4>
 
@@ -97,7 +97,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 - [X] Remover.
 <hr>
 
-                                     Rotas Públicas
+                                            Rotas Públicas
 <h4 align="center" style="font-weight: bold"> {Saudex} </h4>
 
 - [X] Pesquisar centros médicos que dispõe de endocrinologistas;
@@ -263,7 +263,7 @@ Dito isto, siga o processo abaixo:
 <br>
 
 
-<div style="margin-left: 20%">
+
 
 | **_{POST}_** | Retornar |
 | ------------------- | :-------------------: |
@@ -298,7 +298,7 @@ Dito isto, siga o processo abaixo:
 | /healthcenter/delete/:id | Deletar os registros dos Postos de Saúde. |
 | /hospital/delete/:id | Deletar os registros dos Hospitais. |
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
-</div>
+
 
 <br>
 
