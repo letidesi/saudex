@@ -7,41 +7,45 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 <br>
 
 ## <p align="center" style="font-weight: bold">Origem da API - Saudex -</p>
-> <h3> O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema do plural da palavra saúdes.
+> <h4> O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema do plural da palavra saúdes.
 
 <br>
 
-> <h3> No entanto, o contexto geral sobre esta ideia é extremamente revoltante e triste. Durante anos, verificou-se ralatos, não somente através de Victor Soares mas de outros cidadãos, o descaso do Ministério da Saúde com as pessoas nos quais fazem o uso de insulina, que precisam de insumos gratuitos para gerar um controle maior sobre sua saúde e sua rotina diária. 
+> <h4> No entanto, o contexto geral sobre esta ideia é extremamente revoltante e triste. Durante anos, verificou-se ralatos, não somente através de Victor Soares mas de outros cidadãos, o descaso do Ministério da Saúde com as pessoas nos quais fazem o uso de insulina, que precisam de insumos gratuitos para gerar um controle maior sobre sua saúde e sua rotina diária. 
 <br>
 
-> <h3> Consequentemente durante a pandemia aconteceu um aumento nesses relatos. No ano de 2020 à 2021, acompanhei uma experiência pessoal ruim com um amigo, Victor Soares; Me informou que não havia conseguido adquirir fitas para medir sua glicose, não existia um aplicativo funcional ou gratuito para o auxiliar melhor em como, por exemplo, encontrar médicos endocrinologistas, no qual se tornava uma situação frustrante, atrapalhava seu emocional, sua rotina e seu dia-dia, além do medo de ocorrer alguma coisa mais grave.
-
-<br>
-
-> <h3> Como se não bastasse, neste mesmo período de ano, perdi meu cunhado, André Marcos, vítima da leucemia e minha prima, Sabrina Thomaz, vítima da rejeição do transplante de coração. Sendo eles, duas pessoas incríveis quais desfrutei do prazer de conhecer, conviver... Infelizmente, nos deixaram cedo demais, são duas pessoas as quais viveram, amaram à vida cada segundo, aproveitaram todos os momentos, duas pessoas guerreiras, duas pessoas fortes, que nos ensinou muito, são duas pessoas quais se estabeleceram em nossos corações e, com certeza, marcaram nossas almas e encontraram-se para sempre em nossas memórias.
+> <h4> Consequentemente durante a pandemia aconteceu um aumento nesses relatos. No ano de 2020 à 2021, acompanhei uma experiência pessoal ruim com um amigo, Victor Soares; Me informou que não havia conseguido adquirir fitas para medir sua glicose, não existia um aplicativo funcional ou gratuito para o auxiliar melhor em como, por exemplo, encontrar médicos endocrinologistas, no qual se tornava uma situação frustrante, atrapalhava seu emocional, sua rotina e seu dia-dia, além do medo de ocorrer alguma coisa mais grave.
 
 <br>
 
-> <h3> Como resultado deste período do ano de 2020 à 2021, nasceu o sentimento de impotência, o pesar em não ter a influência necessária para ajudar amenizar o sofrimento daqueles que amamos. Portanto, analisando tudo que aconteceu até o atual momento, realizei a criação da API Saudex, uma inspiração que surgiu através de dor e perda.
+> <h4> Como se não bastasse, neste mesmo período de ano, perdi meu cunhado, André Marcos, vítima da leucemia e minha prima, Sabrina Thomaz, vítima da rejeição do transplante de coração. Sendo eles, duas pessoas incríveis quais desfrutei do prazer de conhecer, conviver... Infelizmente, nos deixaram cedo demais, são duas pessoas as quais viveram, amaram à vida cada segundo, aproveitaram todos os momentos, duas pessoas guerreiras, duas pessoas fortes, que nos ensinou muito, são duas pessoas quais se estabeleceram em nossos corações e, com certeza, marcaram nossas almas e encontraram-se para sempre em nossas memórias.
+
+<br>
+
+> <h4> Como resultado deste período do ano de 2020 à 2021, nasceu o sentimento de impotência, o pesar em não ter a influência necessária para ajudar amenizar o sofrimento daqueles que amamos. Portanto, analisando tudo que aconteceu até o atual momento, realizei a criação da API Saudex, uma inspiração que surgiu através de dor e perda.
+
+<br>
 
 <br>
 
 ## <p align="center" style="font-weight: bold">Objetivo</p>
 
-><h3> A API Saudex, possui como o seu principal objetivo a importância de ajudar pessoas diabéticas que fazem uso de insulinas e que tem a necessidade de insumos gratuitos. 
+> <h4> A API Saudex, possui como o seu principal objetivo a importância de ajudar pessoas diabéticas que fazem uso de insulinas e que tem a necessidade de insumos gratuitos. 
 <br>
 
-> <h3> Para atingirmos este objetivo, realizaremos os cadastros de Administradores, os tornando administrantes da nossa API Saudex e, por isso, serão capazes de realizarem o login, desse modo, ocasionará automaticamente um token ou chave, como costumamos chamar, através deste token obtido os administrantes conseguirão registrar os Hospitais, Postos de Saúde e Farmácias, somente as que são credenciadas no “Programa Farmácia Popular”. 
+> <h4> Para atingirmos este objetivo, realizaremos os cadastros de Administradores, os tornando administrantes da nossa API Saudex e, por isso, serão capazes de realizarem o login, desse modo, ocasionará automaticamente um token ou chave, como costumamos chamar, através deste token obtido os administrantes conseguirão registrar os Hospitais, Postos de Saúde e Farmácias, somente as que são credenciadas no “Programa Farmácia Popular”. 
 <br>
 
-> <h3> Além disso, com os estabelecimentos acima cadastrados com sucesso em nosso banco de dados, os administrantes e usuários comuns, terão a possibilidade de pesquisar pela nossa API Saudex, a qual informará onde encontrá-los dentre o estado do Rio de Janeiro, e também, pesquisá-los por município, por nome e por id; Para pesquisar por id é obrigatório realização do login como administrador. 
+> <h4> Além disso, com os estabelecimentos acima cadastrados com sucesso em nosso banco de dados, os administrantes e usuários comuns, terão a possibilidade de pesquisar pela nossa API Saudex, a qual informará onde encontrá-los dentre o estado do Rio de Janeiro, e também, pesquisá-los por município, por nome e por id; Para pesquisar por id é obrigatório realização do login como administrador. 
 
 <br>
 
-> <h3> Além de, encontrar médicos endocrinologistas, saber as quantidades de insumos disponíveis para estas pessoas e informar as quantidades de senhas disponibilizadas para o atendimento.  
+> <h4> Além de, encontrar médicos endocrinologistas, saber as quantidades de insumos disponíveis para estas pessoas e informar as quantidades de senhas disponibilizadas para o atendimento.  
 <br>
 
-> <h3>  Em resumo, a Saudex foi desenvolvida com o propósito de indicar aos nossos usuários, os quais sofrem com a diabetes, em qual centro médico encontrar, primordialmente, médicos e insumos gratuitamente, que sejam mais próximo de sua residência, entre outras finalidades.
+> <h4>  Em resumo, a Saudex foi desenvolvida com o propósito de indicar aos nossos usuários, os quais sofrem com a diabetes, em qual centro médico encontrar, primordialmente, médicos e insumos gratuitamente, que sejam mais próximo de sua residência, entre outras finalidades.
+
+<br>
 
 <br>
 
@@ -98,8 +102,8 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 - [X] Pesquisar centros médicos que dispõe de endocrinologistas;
 - [X] Pesquisar centros médicos que dispõe de insumos para diabetes;
-- [X] Pesquisar quantidade de insumos para diabtes disponíveis nos Hospitais;
-- [X] Pesquisar quantidade de insumos para diabtes disponíveis nos Postos de Saúde;
+- [X] Pesquisar quantidade de insumos para diabetes disponíveis nos Hospitais;
+- [X] Pesquisar quantidade de insumos para diabetes disponíveis nos Postos de Saúde;
 - [X] Pesquisar quantidade de senhas para atendimento nos Postos de Saúde;
 - [X] Pesquisar quantidade de senhas para atendimento nos Hospitais;
 - [X] Pesquisar Postos de Saúde por nome;
@@ -110,6 +114,9 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 - [X] Pesquisar Farmácias por município;
 - [X] Mostrar Farmácias credenciadas no "Programa Farmácia Popular".
 
+<br>
+
+<br>
 
 ## <p align="center" style="font-weight: bold">A Linguagem de Programação Executada</p>
 <p p align="center"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img></p>
@@ -134,9 +141,13 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 </a>
 </p>
 
+<br>
+
+<br>
+
 ## <p align="center" style="font-weight: bold">Instruções de Instalação da API Saudex </p>
 
-<h3> Antes de tudo, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do <a href="https://code.visualstudio.com/download"> Visual Studio Code </a>. Além disso, para verificar se as modificações foram realizadas com sucesso, deixaremos o link para instalação de um banco de dados NoSQL, de nossa preferência, o <a href="https://www.mongodb.com/try/download/community">MongoDB</a>. E também, deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e comparatilhar APIs, são eles: 
+<h4> Antes de tudo, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do <a href="https://code.visualstudio.com/download"> Visual Studio Code </a>. Além disso, para verificar se as modificações foram realizadas com sucesso, deixaremos o link para instalação de um banco de dados NoSQL, de nossa preferência, o <a href="https://www.mongodb.com/try/download/community">MongoDB</a>. E também, deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e comparatilhar APIs, são eles: 
  o <a href="https://www.postman.com/downloads/">Postman</a> e o <a href="https://insomnia.rest/download">Insomnia</a>; E por favor, escolha a versão de acordo com o seu sistema.
 
 Após isso, é necessário realizar também o download e concluir instalação do <a href="https://nodejs.org/en/download/"> Node.js</a>; E novamente, escolha a versão de acordo com o seu sistema. 
@@ -176,9 +187,11 @@ Dito isto, siga o processo abaixo:
 
 <br>
 
+<br>
+
 ## <p align="center" style="font-weight: bold">Aprendizados </p>
 
-<h3> A construção deste projeto final, consiste nesta API fundamentada no CRUD com a integração do banco de dados NoSQL, o MongoDB. 
+<h4> A construção deste projeto final, consiste nesta API fundamentada no CRUD com a integração do banco de dados NoSQL, o MongoDB. 
 <br>
 <br>
 
@@ -189,6 +202,8 @@ Dito isto, siga o processo abaixo:
       READ (LER, CONSULTAR)
       UPDATE (ATUALIZAR) 
       DELETE (DESTRUIÇÃO, REMOÇÃO).
+
+<br>
 
 <br>
 
@@ -270,4 +285,48 @@ Dito isto, siga o processo abaixo:
 | /healthcenter/delete/:id | Deletar os registros dos Postos de Saúde. |
 | /hospital/delete/:id | Deletar os registros dos Hospitais. |
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
+<br>
 
+<br>
+
+## <p align="center" style="font-weight: bold"> Referências </p>
+
+<h3>
+
+ > <a href="https://bandrio.band.uol.com.br/noticias/1000001005473/pacientes-diabeticos-ficam-sem-insulina-do-estado-do-rio-de-janeiro-.html"><p align="center">Band</p></a>
+
+ > <a href="http://www.metodista.br/rronline/diabeticos-enfrentam-dificuldades-para-receber-insumos-durante-a-pandemia-aponta-estudo"><p align="center">Universidade Metodista de São Paulo</p></a>
+
+ > <a href="http://g1.globo.com/bom-dia-brasil/noticia/2017/02/diabeticos-nao-encontram-insulina-em-hospitais-da-rede-publica.html"><p align="center">Bom Dia Brasil</p></a>
+
+  > <a href="https://g1.globo.com/profissao-reporter/noticia/2021/08/11/mae-aplica-insulina-vencida-na-filha-com-diabetes-por-falta-de-medicamento-e-a-que-tem.ghtml"><p align="center">Profissão Repórter</p></a>
+
+  > <a href="http://g1.globo.com/rio-de-janeiro/noticia/2014/02/pacientes-diabeticos-sofrem-com-falta-de-insulina-em-sao-goncalo-rj.html"><p align="center">g1 - Rio de Janeiro</p></a>
+
+  > <a href="https://g1.globo.com/to/tocantins/noticia/2021/08/07/moradores-denunciam-falta-de-insumos-e-medicamentos-na-rede-publica-de-saude-em-palmas.ghtml"><p align="center">g1 - São Paulo</p></a>
+
+</h3>
+
+
+<br>
+
+<br>
+
+## <p align="center" style="font-weight: bold"> Agradecimentos </p>
+
+<h4>
+<p>
+  Muitas pessoas me ajudaram  na criação deste projeto, para alcançar este objetivo apresentou-se um alicerce colossal e extraordinário, e sou extremamente grata a elas pela sua participação durante as semanas que trabalhei nele: </p>
+<p> A Maria Doroteia e ao Mário Vilmar, meus pais, obrigada por todo o suporte, amparo, e ter acreditado sempre no meu processo.
+<p> A minha querida prima <a href="https://www.instagram.com/may_desiderio/">Mayara Desiderio</a>, a minha doce Samara Thomaz, a minha segunda "mãe" <a href="https://www.instagram.com/arina_desouza/p/B2uGhalB6Zp/?utm_medium=copy_link"> Àrina Valtiery</a> e ao <a href="https://www.instagram.com/ctorsoares/?utm_medium=copy_link">Victor Soares</a>, pela paciência, apoio, por permanecerem sempre comigo nos bons e maus momentos e tornassem minha segunda família.</p>
+<p> A todas minhas colegas e amigas que fizeram parte da <a href="https://www.linkedin.com/company/reprogramabr/">{Reprograma}</a> junto comigo, gostaria de, particulamente, agradecer a <a href="https://www.linkedin.com/in/amanda-santos-b50200165/">Amanda Leal</a> pela assistência emocional e <a href="https://www.linkedin.com/in/xeniabarreto">Xênia Barreto</a> pelo auxílio no momento de codar.</p>
+<p> Por último, não menos importante, agradeço também as minhas professoras, monitoras que me orientou a cada momento deste projeto.
+</h3>
+<br>
+
+<br>
+
+<br>
+<br>
+
+<h3 align="center">Projeto especialmente dedicado à minha vózinha, que você brilhe onde quer que esteja, te amamos. 🖤 </h4>
