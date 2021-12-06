@@ -55,7 +55,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <hr>
 
-                   Rotas Privadas
+                                       Rotas Privadas
 
 <h4 align="center" style="font-weight: bold"> {Administradores} </h4>
 
@@ -97,7 +97,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 - [X] Remover.
 <hr>
 
-                      Rotas Públicas
+                                     Rotas Públicas
 <h4 align="center" style="font-weight: bold"> {Saudex} </h4>
 
 - [X] Pesquisar centros médicos que dispõe de endocrinologistas;
@@ -113,6 +113,12 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 - [X] Pesquisar Hospitais por município;
 - [X] Pesquisar Farmácias por município;
 - [X] Mostrar Farmácias credenciadas no "Programa Farmácia Popular".
+
+<br>
+
+<br>
+
+## <p align="center" style="font-weight: bold"> Execução Saudex </p>
 
 <br>
 
@@ -256,6 +262,8 @@ Dito isto, siga o processo abaixo:
 
 <br>
 
+<h4  style= "margin-left: 20%;">
+
 | **_{POST}_** | Retornar |
 | ------------------- | :-------------------: |
 | /register/admin | Cadastrar os administradores. |
@@ -288,7 +296,7 @@ Dito isto, siga o processo abaixo:
 <br>
 
 <br>
-
+</h4>
 ## <p align="center" style="font-weight: bold"> Referências </p>
 
 <h3>
