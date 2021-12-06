@@ -161,7 +161,9 @@ Após isso, é necessário realizar também o download e concluir instalação d
 Dito isto, siga o processo abaixo:
 
  - Faça um fork da API Saudex:
-   <img align="center" src="assets/fork.jpg">
+<p align="center"> 
+   <img align="center" src="assets/fork.jpg" width="250">
+</p>
 
  - Na sua área de trabalho, dê um clique no lado esquerdo do mouse ou direito, caso você seja canhota, abra o terminal git bash here:
 
