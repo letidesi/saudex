@@ -165,7 +165,9 @@ Dito isto, siga o processo abaixo:
 
  - Na sua área de trabalho, dê um clique no lado esquerdo do mouse ou direito, caso você seja canhota, abra o terminal git bash here:
 
-   <img align="center" src="assets/gitbash.jpg" height="250" style="margin-left: 25%">
+<p align="center"> 
+   <img src="assets/gitbash.jpg" height="250" >
+</p>
 
 - No terminal Git Bash Here, faça o clone da API Saudex:
 
