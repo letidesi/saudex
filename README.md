@@ -262,7 +262,8 @@ Dito isto, siga o processo abaixo:
 
 <br>
 
-<h4  style= "margin-left: 20%;">
+
+<div style="margin-left: 20%">
 
 | **_{POST}_** | Retornar |
 | ------------------- | :-------------------: |
@@ -272,9 +273,12 @@ Dito isto, siga o processo abaixo:
 | /hospital/register | Cadastrar os Hospitais. |
 | /pharmacy/register | Cadastrar as Farmácias. |
 
+
 <br>
 
 <br>
+
+
 
 | **_{PUT}_** | Retornar |
 | ------------------- | :-------------------: |
@@ -282,6 +286,7 @@ Dito isto, siga o processo abaixo:
 | /healthcenter/update/:id | Atualizar registros dos Postos de Saúde. |
 | /hospital/update/:id| Atualizar registros dos Hospitais. |
 | /pharmacy/update/:id | Atualizar registros das Farmácias. |
+
 
 <br>
 
@@ -293,10 +298,13 @@ Dito isto, siga o processo abaixo:
 | /healthcenter/delete/:id | Deletar os registros dos Postos de Saúde. |
 | /hospital/delete/:id | Deletar os registros dos Hospitais. |
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
+</div>
+
 <br>
 
 <br>
-</h4>
+
+
 ## <p align="center" style="font-weight: bold"> Referências </p>
 
 <h3>
