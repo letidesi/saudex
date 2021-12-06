@@ -220,6 +220,7 @@ Dito isto, siga o processo abaixo:
 ## <p align="center" style="font-weight: bold"> Rotas Públicas </p>
 
     Nome da rota principal = Saudex
+<h4>
 
 |  **_{GET}_** | Retornar |
 | ------------------- | :-------------------: |
@@ -303,6 +304,7 @@ Dito isto, siga o processo abaixo:
 | /hospital/delete/:id | Deletar os registros dos Hospitais. |
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
 
+</h4>
 
 <br>
 
