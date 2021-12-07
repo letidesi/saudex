@@ -4,9 +4,16 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 # <h1 align="center" style="font-weight: bold">API - Saudex</h1>
 
+## <p align="center" style="font-weight: bold">Sumário</p>
+
+- [Origem](#origem-da-api-saudex-)
+- [Objetivo](#objetivo)
+
 <br>
 
-## <p align="center" style="font-weight: bold">Origem da API - Saudex -</p>
+<br>
+
+## **Origem da API - Saudex -**
 > <h4> O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema do plural da palavra saúdes.
 
 <br>
@@ -28,7 +35,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <br>
 
-## <p align="center" style="font-weight: bold">Objetivo</p>
+# **Objetivo**
 
 > <h4> A API Saudex, possui como o seu principal objetivo a importância de ajudar pessoas diabéticas que fazem uso de insulinas e que tem a necessidade de insumos gratuitos. 
 <br>
@@ -119,6 +126,8 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 <br>
 
 ## <p align="center" style="font-weight: bold"> Execução Saudex </p>
+
+ <p p align="center"><img src="assets/saudexgif.gif"></img></p>
 
 <br>
 
