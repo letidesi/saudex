@@ -6,7 +6,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 ## **Sumário**
 
-- [Origem da API Saudex](#origem-da-api-saudex-)
+- [Origem da API Saudex](#origem-da-api-saudex)
 - [Objetivo](#objetivo)
 - [Funcionalidades](#funcionalidades)
 - [Execução Saudex](#execução-saudex)
@@ -25,7 +25,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <br>
 
-## **Origem da API - Saudex -**
+## **Origem da API Saudex**
 > <h4> O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema do plural da palavra saúdes.
 
 <br>
