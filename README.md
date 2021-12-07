@@ -6,9 +6,20 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 ## **Sumário**
 
-- [Origem](#origem-da-api-saudex-)
+- [Origem da API Saudex](#origem-da-api-saudex-)
 - [Objetivo](#objetivo)
 - [Funcionalidades](#funcionalidades)
+- [Execução Saudex](#execução-saudex)
+- [A Linguagem de Programação Executada](#a-linguagem-de-programação-executada)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Bibliotecas Aplicadas](#bibliotecas-aplicadas)
+- [Instruções de Instalação da API Saudex](#instruções-de-instalação-da-api-saudex)
+- [Aprendizados](#aprendizados)
+- [Rotas Públicas](#rotas-públicas)
+- [Rotas Privadas](#rotas-privadas)
+- [Referências](#referências)
+- [Agradecimentos](#agradecimentos)
+
 
 <br>
 
@@ -126,7 +137,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <br>
 
-## <p align="center" style="font-weight: bold"> Execução Saudex </p>
+##  **Execução Saudex** 
 
  <p p align="center"><img src="assets/saudexgif.gif"></img></p>
 
@@ -134,19 +145,20 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <br>
 
-## <p align="center" style="font-weight: bold">A Linguagem de Programação Executada</p>
-<p p align="center"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img></p>
+## **A Linguagem de Programação Executada**
+<p align="justify"><br><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img></p>
 
-## <p align="center" style="font-weight: bold">Tecnologias Utilizadas</p>
-
-<p  align="center">
+## **Tecnologias Utilizadas**
+<br>
+<p  align="justify">
 <a  href="https://git-scm.com/"><img  alt="Git version"  src="https://img.shields.io/badge/Git/GitHub-green">
 <a  href="https://nodejs.org/pt-br/"><img  alt="Node version"  src="https://img.shields.io/badge/NodeJS-green">
 <a  href="https://www.mongodb.com/cloud/atlas"><img  alt="Node version"  src="https://img.shields.io/badge/MongoDB%20Atlas-green"></a>
 
-## <p align="center" style="font-weight: bold">Bibliotecas Aplicadas</p>
+## **Bibliotecas Aplicadas**
+<br>
 
-<p  align="center">
+<p  align="justify">
 <a  href="https://www.npmjs.com/"><img  alt="npm version"  src="https://img.shields.io/badge/npm-6.14.6-orange">
 <a  href="https://expressjs.com/pt-br/"><img  alt="Express version"  src="https://img.shields.io/badge/express-4.17.1-orange">
 <a  href="https://mongoosejs.com/"><img  alt="Mongoose version"  src="https://img.shields.io/badge/mongoose-5.10.17-orange">
@@ -161,7 +173,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 <br>
 
-## <p align="center" style="font-weight: bold">Instruções de Instalação da API Saudex </p>
+## **Instruções de Instalação da API Saudex** 
 
 <h4> Antes de tudo, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do <a href="https://code.visualstudio.com/download"> Visual Studio Code </a>. Além disso, para verificar se as modificações foram realizadas com sucesso, deixaremos o link para instalação de um banco de dados NoSQL, de nossa preferência, o <a href="https://www.mongodb.com/try/download/community">MongoDB</a>. E também, deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e comparatilhar APIs, são eles: 
  o <a href="https://www.postman.com/downloads/">Postman</a> e o <a href="https://insomnia.rest/download">Insomnia</a>; E por favor, escolha a versão de acordo com o seu sistema.
@@ -209,7 +221,7 @@ Dito isto, siga o processo abaixo:
 
 <br>
 
-## <p align="center" style="font-weight: bold">Aprendizados </p>
+## **Aprendizados**
 
 <h4> A construção deste projeto final, consiste nesta API fundamentada no CRUD com a integração do banco de dados NoSQL, o MongoDB. 
 <br>
@@ -227,7 +239,7 @@ Dito isto, siga o processo abaixo:
 
 <br>
 
-## <p align="center" style="font-weight: bold"> Rotas Públicas </p>
+##  **Rotas Públicas**
 
     Nome da rota principal = Saudex
 <h4>
@@ -250,7 +262,7 @@ Dito isto, siga o processo abaixo:
 
 
 
-## <p align="center" style="font-weight: bold"> Rotas Privadas </p>
+##  **Rotas Privadas**
 
      Nome da rota principal = Saudex
         
@@ -321,7 +333,7 @@ Dito isto, siga o processo abaixo:
 <br>
 
 
-## <p align="center" style="font-weight: bold"> Referências </p>
+##  **Referências**
 
 <h3>
 
@@ -344,7 +356,7 @@ Dito isto, siga o processo abaixo:
 
 <br>
 
-## <p align="center" style="font-weight: bold"> Agradecimentos </p>
+##  **Agradecimentos**
 
 <h4>
 <p>
@@ -362,3 +374,11 @@ Dito isto, siga o processo abaixo:
 <br>
 
 <h3 align="center">Projeto especialmente dedicado à minha vózinha, que você brilhe onde quer que esteja, te amamos. 🖤 </h4>
+
+<br>
+
+
+[inicio](#sumário) 
+
+   
+
