@@ -139,6 +139,10 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 ##  **Execução Saudex** 
 
+ -  Informando todos os centros médicos que dispõe de médicos endocrinologistas. ✅
+ 
+ - Informando todos os centros médicos que dispõe de insumos para diabetes ✅
+
  <p p align="center"><img src="assets/saudexgif.gif"></img></p>
 
 <br>
