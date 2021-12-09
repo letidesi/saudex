@@ -267,17 +267,18 @@ Feito isto, siga o processo abaixo:
 | ------------------- | :-------------------: |
 | /search/endocrinologists | Lista todos os Centros Médicos que possuem endocrinologistas disponíveis. |
 | /search/supplies | Lista todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
-| /search/healthcenter/quantitysupplies | Lista todos os Postos de Saúdes que possuem a mesma quantidade de insumos informada pelo usuário. |
-| /search/healthcenter/attendancepassword | Lista todos os Postos de Saúdes que possuem a mesma quantidade de senha de atendimento informada pelo usuário. |
-| /search/healthcenter/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo usuário. |
+| /search/healthpost/quantitysupplies | Lista todos os Postos de Saúdes que possuem a mesma quantidade de insumos informada pelo usuário. |
+| /search/healthpost/attendancepassword | Lista todos os Postos de Saúdes que possuem a mesma quantidade de senha de atendimento informada pelo usuário. |
+| /search/healthpost/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo usuário. |
 | /search/hospital/quantitysupplies | Lista todos os Hospitais que possuem a mesma quantidade de insumos informada pelo usuário. |
 | /search/hospital/attendancepassword | Lista todos os Hospitais que possuem a mesma quantidade de senha de atendimento informada pelo usuário.
 | /search/hospital/name | Lista todos os Hospitais que possuem o mesmo nome informado pelo usuário. |
 | /pharmacy/popularprogram | Lista todas as Farmácias que são credenciadas no "Programa Farmácia Popular". |
 | /search/pharmacy/name| Lista todas as Farmácias que possuem o mesmo nome informado pelo usuário. |
-| /search/healthcenter/municipality| Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo usuário. |
+| /search/healthpost/municipality | Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo usuário. |
 | /search/hospital/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo usuário. |
-| /search/pharmacy/municipality | Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário.
+| /search/pharmacy/municipality | Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário. |
+| /all | Lista todos os centros médicos que foram registrados.
 
 
 
@@ -291,10 +292,10 @@ Feito isto, siga o processo abaixo:
 | /message | Informar mensagem para administradores. |
 | /adm | Lista todos os Admnistradores cadastrados. |
 | /admin/:id | Procura o Admnistrador do id requisitado pelo Admnistrador logado.|
-| /healthcenter | Lista de todos os Postos de Saúde cadastrados. |
-| /healthcenter/search/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo administrante. |
-|/healthcenter/search/municipality | Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo administrante.  |
-|/healthcenter/search/:id | Procura o Posto de Saúde do id requisitado pelo administrante. |
+| /healthpost | Lista de todos os Postos de Saúde cadastrados. |
+| /healthpost/search/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo administrante. |
+| /healthpost/search/municipality | Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo administrante.  |
+| /healthpost/search/:id | Procura o Posto de Saúde do id requisitado pelo administrante. |
 | /hospital | Lista de todos os Hospitais cadastrados. |
 | /hospital/search/name | Lista todos os Hospitais que possuem o mesmo nome informado pelo administrante. |
 | /hospital/search/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo admnistrante.  |
@@ -315,7 +316,7 @@ Feito isto, siga o processo abaixo:
 | ------------------- | :-------------------: |
 | /register/admin | Cadastrar os administradores. |
 | /login/admin | Realizar login do administrante cadastrado. |
-| /healthcenter/register| Cadastrar os Postos de Saúde. |
+| /healthpost/register| Cadastrar os Postos de Saúde. |
 | /hospital/register | Cadastrar os Hospitais. |
 | /pharmacy/register | Cadastrar as Farmácias. |
 
@@ -329,7 +330,7 @@ Feito isto, siga o processo abaixo:
 | **_{PUT}_** | Retornar |
 | ------------------- | :-------------------: |
 | /update/admin/:id| Atualizar registros dos administradores. |
-| /healthcenter/update/:id | Atualizar registros dos Postos de Saúde. |
+| /healthpost/update/:id | Atualizar registros dos Postos de Saúde. |
 | /hospital/update/:id| Atualizar registros dos Hospitais. |
 | /pharmacy/update/:id | Atualizar registros das Farmácias. |
 
@@ -341,7 +342,7 @@ Feito isto, siga o processo abaixo:
 | **_{DELETE}_** | Retornar |
 | ------------------- | :-------------------: |
 | /delete/admin/:id | Deletar os registros dos administradores. |
-| /healthcenter/delete/:id | Deletar os registros dos Postos de Saúde. |
+| /healthpost/delete/:id | Deletar os registros dos Postos de Saúde. |
 | /hospital/delete/:id | Deletar os registros dos Hospitais. |
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
 

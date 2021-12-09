@@ -1,11 +1,11 @@
-const HealthCenterSchema = require("../models/healthCenterSchema");
+const HealthPostSchema = require("../models/healthPostSchema");
 const HospitalSchema = require("../models/hospitalSchema");
 const PharmacySchema = require("../models/pharmacySchema");
 const mongoose = require("mongoose");
 
 const searchByAllEndocrinologists = async (req, res) => {
   try {
-    const findAllHealthCenters = await HealthCenterSchema.find({
+    const findAllHealthPosts = await HealthPostSchema.find({
       has_endocrinologist_doctors:
         req.query.has_endocrinologist_doctors == "True" ||
         req.query.has_endocrinologist_doctors == "true" ||
@@ -30,7 +30,7 @@ const searchByAllEndocrinologists = async (req, res) => {
     }
     res.status(200).json({
       message_Hospital: "All Medical Centers that have endocrinologists:",
-      findAllHealthCenters,
+      findAllHealthPosts,
       findAllHospitals,
     });
   } catch (e) {
@@ -42,7 +42,7 @@ const searchByAllEndocrinologists = async (req, res) => {
 
 const searchAllMedicalCentersThatHaveSupplies = async (req, res) => {
   try {
-    const findAllHealthCenters = await HealthCenterSchema.find({
+    const findAllHealthPosts = await HealthPostSchema.find({
       availability_of_supplies_for_diabetic_people:
         req.query.availability_of_supplies_for_diabetic_people == "True" ||
         req.query.availability_of_supplies_for_diabetic_people == "true" ||
@@ -69,7 +69,7 @@ const searchAllMedicalCentersThatHaveSupplies = async (req, res) => {
     res.status(200).json({
       message_Hospital:
         "All Medical Centers that have supplies available for diabetic people:",
-      findAllHealthCenters,
+      findAllHealthPosts,
       findAllHospitals,
     });
   } catch (e) {
@@ -79,23 +79,20 @@ const searchAllMedicalCentersThatHaveSupplies = async (req, res) => {
   }
 };
 
-
-
 const searchForQuantityOfDiabetesSuppliesAtTheHospital = async (req, res) => {
   try {
     const quantityOfSupplies = await HospitalSchema.find({
-      how_many_supplies_are_available_for_diabetics: req.query.how_many_supplies_are_available_for_diabetics
-    })
- 
+      how_many_supplies_are_available_for_diabetics:
+        req.query.how_many_supplies_are_available_for_diabetics,
+    });
+
     if (quantityOfSupplies.length === 0) {
       return res.status(404).json({
         message:
           "Sorry, we have no supplies available at this value, please check if we have higher values.",
       });
     }
-    if (
-      req.query.how_many_supplies_are_available_for_diabetics > 0
-    ) {
+    if (req.query.how_many_supplies_are_available_for_diabetics > 0) {
       return res.status(200).json({
         message: `Quantity of diabetes supplies found:`,
         quantityOfSupplies,
@@ -113,22 +110,20 @@ const searchForQuantityOfDiabetesSuppliesAtTheHospital = async (req, res) => {
   }
 };
 
-
-const searchForQuantityOfDiabetesSuppliesAtTheHealthCenter = async (req, res) => {
+const searchForQuantityOfDiabetesSuppliesAtTheHealthPost = async (req, res) => {
   try {
-    const quantityOfSupplies = await HealthCenterSchema.find({
-      how_many_supplies_are_available_for_diabetics: req.query.how_many_supplies_are_available_for_diabetics
-    })
- 
+    const quantityOfSupplies = await HealthPostSchema.find({
+      how_many_supplies_are_available_for_diabetics:
+        req.query.how_many_supplies_are_available_for_diabetics,
+    });
+
     if (quantityOfSupplies.length === 0) {
       return res.status(404).json({
         message:
           "Sorry, we have no supplies available at this value, please check if we have higher values.",
       });
     }
-    if (
-      req.query.how_many_supplies_are_available_for_diabetics > 0
-    ) {
+    if (req.query.how_many_supplies_are_available_for_diabetics > 0) {
       return res.status(200).json({
         message: `Quantity of diabetes supplies found:`,
         quantityOfSupplies,
@@ -146,11 +141,9 @@ const searchForQuantityOfDiabetesSuppliesAtTheHealthCenter = async (req, res) =>
   }
 };
 
-
-
-const searchForHealthCentersByNumberOfServiceTickets = async (req, res) => {
+const searchForHealthPostsByNumberOfServiceTickets = async (req, res) => {
   try {
-    const many_found = await HealthCenterSchema.find({
+    const many_found = await HealthPostSchema.find({
       how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist:
         req.query
           .how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist,
@@ -182,7 +175,6 @@ const searchForHealthCentersByNumberOfServiceTickets = async (req, res) => {
     });
   }
 };
-
 
 const searchForHospitalsByNumberOfServiceTickets = async (req, res) => {
   try {
@@ -219,18 +211,18 @@ const searchForHospitalsByNumberOfServiceTickets = async (req, res) => {
   }
 };
 
-const searchAllHealthCentersByName = async (req, res) => {
+const searchAllHealthPostsByName = async (req, res) => {
   try {
-    const name_found = await HealthCenterSchema.find({
-      healthcenter_name: new RegExp(req.query.healthcenter_name, "i"),
+    const name_found = await HealthPostSchema.find({
+      health_post_name: new RegExp(req.query.health_post_name, "i"),
     });
     if (name_found.length === 0) {
       return res.status(404).json({
-        message: "There are no health center with this name.",
+        message: "There are no health post with this name.",
       });
     }
     res.status(200).json({
-      message: `All health centers under the name ${req.query.healthcenter_name}:`,
+      message: `All health posts under the name ${req.query.health_post_name}:`,
       name_found,
     });
   } catch (e) {
@@ -282,18 +274,18 @@ const searchAllPharmaciesByName = async (req, res) => {
   }
 };
 
-const searchAllHealthCentersByMunicipality = async (req, res) => {
+const searchAllHealthPostsByMunicipality = async (req, res) => {
   try {
-    const municipalityFound = await HealthCenterSchema.find({
+    const municipalityFound = await HealthPostSchema.find({
       municipality: new RegExp(req.query.municipality, "i"),
     });
     if (municipalityFound.length === 0) {
       return res.status(404).json({
-        message: "There are no health centers in this municipality.",
+        message: "There are no health Post in this municipality.",
       });
     }
     res.status(200).json({
-      message: `All health centers in ${req.query.municipality}:`,
+      message: `All health Posts in ${req.query.municipality}:`,
       municipalityFound,
     });
   } catch (e) {
@@ -359,18 +351,35 @@ const findAllPharmacies = async (req, res) => {
   }
 };
 
+const findAllHealthCenters = async (req, res) => {
+  try {
+    const healthPosts = await HealthPostSchema.find();
+    const hospital = await HospitalSchema.find();
+    res.status(200).json({
+      message: "All health centers found:",
+      healthPosts,
+      hospital,
+    });
+  } catch (e) {
+    res.status(500).json({
+      message: e.message,
+    });
+  }
+};
+
 module.exports = {
   searchByAllEndocrinologists,
-  searchAllMedicalCentersThatHaveSupplies, 
-  searchForQuantityOfDiabetesSuppliesAtTheHealthCenter,
+  searchAllMedicalCentersThatHaveSupplies,
+  searchForQuantityOfDiabetesSuppliesAtTheHealthPost,
   searchForQuantityOfDiabetesSuppliesAtTheHospital,
-  searchForHealthCentersByNumberOfServiceTickets,
+  searchForHealthPostsByNumberOfServiceTickets,
   searchForHospitalsByNumberOfServiceTickets,
-  searchAllHealthCentersByName,
+  searchAllHealthPostsByName,
   searchAllHospitalsByName,
   searchAllPharmaciesByName,
-  searchAllHealthCentersByMunicipality,
+  searchAllHealthPostsByMunicipality,
   searchAllHospitalsByMunicipality,
   searchPharmaciesByMunicipality,
-  findAllPharmacies
+  findAllPharmacies,
+  findAllHealthCenters,
 };

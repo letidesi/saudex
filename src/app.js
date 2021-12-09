@@ -6,7 +6,7 @@ const db = require("./database/mongoConfig");
 
 const admRoutes = require("./routes/admRoutes");
 const hospitalRoutes = require("./routes/hospitalRoutes");
-const healthCenterRoutes = require("./routes/healthCenterRoutes");
+const healthPostRoutes = require("./routes/healthPostRoutes");
 const pharmacyRoutes = require("./routes/pharmacyRoutes");
 const saudexRoutes = require("./routes/saudexRoutes");
 
@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use("/saudex", admRoutes);
 app.use("/saudex", hospitalRoutes);
-app.use("/saudex", healthCenterRoutes);
+app.use("/saudex", healthPostRoutes);
 app.use("/saudex", pharmacyRoutes);
 app.use("/saudex", saudexRoutes);
 

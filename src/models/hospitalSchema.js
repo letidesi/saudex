@@ -26,6 +26,10 @@ const hospitalSchema = new mongoose.Schema(
       uppercase: true,
       required: true,
     },
+    neighborhood: {
+      type: String,
+      required: true,
+    },
     zip_code: {
       type: String,
       required: true,
@@ -60,17 +64,21 @@ const hospitalSchema = new mongoose.Schema(
       type: Boolean,
       required: true,
     },
-    how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist:{
-      type: Number,
-      required: true,
-    },
+    how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist:
+      {
+        type: Number,
+        required: true,
+      },
     availability_of_supplies_for_diabetic_people: {
       type: Boolean,
-      required: true
-
+      required: true,
     },
     how_many_supplies_are_available_for_diabetics: {
       type: Number,
+      required: true,
+    },
+    terms_of_use: {
+      type: Boolean,
       required: true,
     },
   },

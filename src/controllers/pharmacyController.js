@@ -69,6 +69,7 @@ const registeringPharmacies = async (req, res) => {
       address: req.body.address,
       municipality: req.body.municipality,
       state: req.body.state,
+      neighborhood: req.body.neighborhood,
       zip_code: req.body.zip_code,
       pharmacy_number: req.body.pharmacy_number,
       cnpj: req.body.cnpj,
@@ -78,6 +79,7 @@ const registeringPharmacies = async (req, res) => {
       hours_of_operation: req.body.hours_of_operation,
       accredited_in_the_popular_pharmacy_program:
         req.body.accredited_in_the_popular_pharmacy_program,
+      terms_of_use: req.body.terms_of_use,
     });
     if (newPharmacy.types_of_healthcare_facilities !== "FARMÁCIA") {
       return res.status(406).json({
@@ -110,6 +112,11 @@ const registeringPharmacies = async (req, res) => {
     if (!newPharmacy.state) {
       return res.status(406).json({
         message: "The state of the pharmacy is required.",
+      });
+    }
+    if (!newPharmacy.neighborhood) {
+      return res.status(406).json({
+        message: "The name of the neighborhood is required.",
       });
     }
     if (!newPharmacy.zip_code) {
@@ -180,6 +187,12 @@ const registeringPharmacies = async (req, res) => {
       return res.status(406).json({
         message:
           "To register your pharmacy you need to be accredited in the 'Popular Pharmacy Program'. ",
+      });
+    }
+    if (!newPharmacy.terms_of_use) {
+      return res.status(406).json({
+        message:
+          "Sorry, unfortunately when you inform us that you do not accept our terms of use, we will not be able to register your health center.",
       });
     }
     const { cnpj } = req.body;

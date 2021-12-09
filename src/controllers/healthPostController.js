@@ -1,15 +1,15 @@
-const HealthCenterSchema = require("../models/healthCenterSchema");
+const HealthPostSchema = require("../models/healthPostSchema");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const SECRET = process.env.SECRET;
 
-const findAllHealthCenters = async (req, res) => {
+const findAllHealthPosts = async (req, res) => {
   try {
-    const healthcenter = await HealthCenterSchema.find();
+    const healthposts = await HealthPostSchema.find();
     res.status(200).json({
-      message: "All health centers found:",
-      healthcenter,
+      message: "All health posts found:",
+      healthposts,
     });
   } catch (e) {
     res.status(500).json({
@@ -18,18 +18,18 @@ const findAllHealthCenters = async (req, res) => {
   }
 };
 
-const searchAllHealthCentersByName = async (req, res) => {
+const searchAllHealthPostsByName = async (req, res) => {
   try {
-    const name_found = await HealthCenterSchema.find({
-      healthcenter_name: new RegExp(req.query.healthcenter_name, "i"),
+    const name_found = await HealthPostSchema.find({
+      health_post_name: new RegExp(req.query.health_post_name, "i"),
     });
     if (name_found.length === 0) {
       return res.status(404).json({
-        message: "There are no health center with this name.",
+        message: "There are no health post with this name.",
       });
     }
     res.status(200).json({
-      message: `All health centers under the name ${req.query.healthcenter_name}:`,
+      message: `All health posts under the name ${req.query.health_post_name}:`,
       name_found,
     });
   } catch (e) {
@@ -41,18 +41,18 @@ const searchAllHealthCentersByName = async (req, res) => {
 
 
 
-const searchAllHealthCentersByMunicipality = async (req, res) => {
+const searchAllHealthPostsByMunicipality = async (req, res) => {
   try {
-    const municipalityFound = await HealthCenterSchema.find({
+    const municipalityFound = await HealthPostSchema.find({
       municipality: new RegExp(req.query.municipality, "i"),
     });
     if (municipalityFound.length === 0) {
       return res.status(404).json({
-        message: "There are no health centers in this municipality.",
+        message: "There are no health posts in this municipality.",
       });
     }
     res.status(200).json({
-      message: `All health centers in ${req.query.municipality}:`,
+      message: `All health posts in ${req.query.municipality}:`,
       municipalityFound,
     });
   } catch (e) {
@@ -63,17 +63,18 @@ const searchAllHealthCentersByMunicipality = async (req, res) => {
 };
 
 
-const registerHealthCenter = async (req, res) => {
+const registerHealthPost = async (req, res) => {
   try {
-    const newHealthCenter = new HealthCenterSchema({
+    const newHealthPost = new HealthPostSchema({
       _id: new mongoose.Types.ObjectId(),
       types_of_healthcare_facilities: req.body.types_of_healthcare_facilities,
-      healthcenter_name: req.body.healthcenter_name,
+      health_post_name: req.body.health_post_name,
       address: req.body.address,
       municipality: req.body.municipality,
       state: req.body.state,
+      neighborhood: req.body.neighborhood,
       zip_code: req.body.zip_code,
-      healthcenter_number: req.body.healthcenter_number,
+      health_post_number: req.body.health_post_number,
       cnpj: req.body.cnpj,
       email: req.body.email,
       telephone: req.body.telephone,
@@ -87,107 +88,113 @@ const registerHealthCenter = async (req, res) => {
         req.body.availability_of_supplies_for_diabetic_people,
       how_many_supplies_are_available_for_diabetics:
         req.body.how_many_supplies_are_available_for_diabetics,
+        terms_of_use: req.body.terms_of_use
     });
-    if (newHealthCenter.types_of_healthcare_facilities !== "POSTO DE SAÚDE") {
+    if (newHealthPost.types_of_healthcare_facilities !== "POSTO DE SAÚDE") {
       return res.status(406).json({
         message:
-          "To register health establishments it is mandatory to be a Health Center.",
+          "To register health establishments it is mandatory to be a Health Post.",
         message_example:
           "Example of how to fill in the field: 'Posto de Saúde'",
       });
     }
-    if (newHealthCenter.state !== "RIO DE JANEIRO") {
+    if (newHealthPost.state !== "RIO DE JANEIRO") {
       return res.status(406).json({
         message:
-          "We can only register health center located in Rio de Janeiro.",
+          "We can only register health post located in Rio de Janeiro.",
       });
     }
-    if (!newHealthCenter.healthcenter_name) {
+    if (!newHealthPost.health_post_name) {
       return res.status(406).json({
-        message: "The name of the health center is required",
+        message: "The name of the health post is required",
       });
     }
-    if (!newHealthCenter.address) {
+    if (!newHealthPost.address) {
       return res.status(406).json({
-        message: "The address of the health center is required.",
+        message: "The address of the health post is required.",
       });
     }
-    if (!newHealthCenter.municipality) {
+    if (!newHealthPost.municipality) {
       return res.status(406).json({
-        message: "The municipality of the health center is required.",
+        message: "The municipality of the health post is required.",
       });
     }
-    if (!newHealthCenter.state) {
+    if (!newHealthPost.state) {
       return res.status(406).json({
-        message: "The state of the health center is required.",
+        message: "The state of the health post is required.",
       });
     }
-    if (!newHealthCenter.zip_code) {
+    if (!newHealthPost.neighborhood) {
       return res.status(406).json({
-        message: "The zip code of the health center is required.",
+        message: "The name of the neighborhood is required.",
+      });
+    }
+    if (!newHealthPost.zip_code) {
+      return res.status(406).json({
+        message: "The zip code of the health post is required.",
       });
     }
     if (
-      newHealthCenter.zip_code.length < 9 ||
-      newHealthCenter.zip_code.length > 9
+      newHealthPost.zip_code.length < 9 ||
+      newHealthPost.zip_code.length > 9
     ) {
       return res.status(406).json({
         message: "Error, the zip code must only have 9 numbers.",
         message_example: " xxxxx-xxx .",
       });
     }
-    if (!newHealthCenter.healthcenter_number) {
+    if (!newHealthPost.health_post_number) {
       return res.status(406).json({
-        message: "The health center number is required..",
+        message: "The health post number is required..",
       });
     }
-    if (newHealthCenter.healthcenter_number.length > 4) {
+    if (newHealthPost.health_post_number.length > 4) {
       return res.status(406).json({
-        message: "Error, the health center number must have up to 4 numbers.",
+        message: "Error, the health post number must have up to 4 numbers.",
         message_examples: " x or xx or xxx or xxxx .",
       });
     }
-    if (!newHealthCenter.cnpj) {
+    if (!newHealthPost.cnpj) {
       return res.status(406).json({
-        message: "The CNPJ of the health center is required.",
+        message: "The CNPJ of the health post is required.",
       });
     }
-    if (newHealthCenter.cnpj.length < 18 || newHealthCenter.cnpj.length > 18) {
+    if (newHealthPost.cnpj.length < 18 || newHealthPost.cnpj.length > 18) {
       return res.status(406).json({
         message: "Error, the CNPJ must only have 18 numbers.",
         message_example: " xx.xxx.xxx/xxxx-xx .",
       });
     }
-    if (!newHealthCenter.telephone) {
+    if (!newHealthPost.telephone) {
       return res.status(406).json({
-        message: "The telefone of the health center is required.",
+        message: "The telefone of the health post is required.",
       });
     }
     if (
-      newHealthCenter.telephone.length < 13 ||
-      newHealthCenter.telephone.length > 13
+      newHealthPost.telephone.length < 13 ||
+      newHealthPost.telephone.length > 13
     ) {
       return res.status(406).json({
         message: "Error, the phone must only have 14 numbers.",
         message_example: " (xx)xxxx-xxxx .",
       });
     }
-    if (!newHealthCenter.email) {
+    if (!newHealthPost.email) {
       return res.status(406).json({
-        message: "The e-mail of the health center is required.",
+        message: "The e-mail of the health post is required.",
       });
     }
-    if (!newHealthCenter.days_open) {
+    if (!newHealthPost.days_open) {
       return res.status(406).json({
-        message: "The days when the health center is open is required.",
+        message: "The days when the health post is open is required.",
       });
     }
-    if (!newHealthCenter.hours_of_operation) {
+    if (!newHealthPost.hours_of_operation) {
       return res.status(406).json({
-        message: "The hours of operation of the health center is required.",
+        message: "The hours of operation of the health post is required.",
       });
     }
-    if (newHealthCenter.has_endocrinologist_doctors == undefined) {
+    if (newHealthPost.has_endocrinologist_doctors == undefined) {
       return res.status(406).json({
         message:
           "Please let us know whether or not you have any endocrinologists available.",
@@ -195,16 +202,16 @@ const registerHealthCenter = async (req, res) => {
       });
     }
     if (
-      newHealthCenter.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist <
+      newHealthPost.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist <
       0
     ) {
       return res.status(406).json({
         message:
-          "The number of tickets for diabetic people must be greater than or equal to zero in order for us to register your health center.",
+          "The number of tickets for diabetic people must be greater than or equal to zero in order for us to register your health post.",
       });
     }
     if (
-      newHealthCenter.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist ==
+      newHealthPost.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist ==
       null
     ) {
       return res.status(406).json({
@@ -212,8 +219,8 @@ const registerHealthCenter = async (req, res) => {
       });
     }
     if (
-      newHealthCenter.has_endocrinologist_doctors == false &&
-      newHealthCenter.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist >
+      newHealthPost.has_endocrinologist_doctors == false &&
+      newHealthPost.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist >
         0
     ) {
      return res.status(406).json({
@@ -221,8 +228,8 @@ const registerHealthCenter = async (req, res) => {
           "Error, without a doctor, you won't have a ticket for diabetic people.",
       });
     } else if (
-      newHealthCenter.has_endocrinologist_doctors == true &&
-      newHealthCenter.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist ==
+      newHealthPost.has_endocrinologist_doctors == true &&
+      newHealthPost.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist ==
         0
     ) {
      return res.status(406).json({
@@ -231,8 +238,8 @@ const registerHealthCenter = async (req, res) => {
       });
     }
     if (
-      newHealthCenter.availability_of_supplies_for_diabetic_people == false &&
-      newHealthCenter.how_many_supplies_are_available_for_diabetics > 0
+      newHealthPost.availability_of_supplies_for_diabetic_people == false &&
+      newHealthPost.how_many_supplies_are_available_for_diabetics > 0
     ) {
      return res.status(406).json({
         message:
@@ -240,8 +247,8 @@ const registerHealthCenter = async (req, res) => {
       });
     }
     if (
-      newHealthCenter.availability_of_supplies_for_diabetic_people == true &&
-      newHealthCenter.how_many_supplies_are_available_for_diabetics == 0
+      newHealthPost.availability_of_supplies_for_diabetic_people == true &&
+      newHealthPost.how_many_supplies_are_available_for_diabetics == 0
     ) {
       return res.status(406).json({
         message:
@@ -249,7 +256,7 @@ const registerHealthCenter = async (req, res) => {
       });
     }
     if (
-      newHealthCenter.availability_of_supplies_for_diabetic_people == undefined
+      newHealthPost.availability_of_supplies_for_diabetic_people == undefined
     ) {
       return res.status(406).json({
         message:
@@ -257,7 +264,7 @@ const registerHealthCenter = async (req, res) => {
         message_example: "Please enter 'true' for yes or 'false' for no.",
       });
     }
-    if (newHealthCenter.how_many_supplies_are_available_for_diabetics == null) {
+    if (newHealthPost.how_many_supplies_are_available_for_diabetics == null) {
       return res.status(406).json({
         message:
           "Please tell us how many supplies are available for diabetic people.",
@@ -265,36 +272,42 @@ const registerHealthCenter = async (req, res) => {
           "If you do not have any diabetic supplies available, please enter '0'.",
       });
     }
-    if (newHealthCenter.how_many_supplies_are_available_for_diabetics < 0) {
+    if (newHealthPost.how_many_supplies_are_available_for_diabetics < 0) {
       return res.status(406).json({
         message:
-          "The amount of inputs for diabetic people must be greater than or equal to zero for us to register your health center.",
+          "The amount of inputs for diabetic people must be greater than or equal to zero for us to register your health post.",
+      });
+    }
+    if (!newHealthPost.terms_of_use) {
+      return res.status(406).json({
+        message:
+          "Sorry, unfortunately when you inform us that you do not accept our terms of use, we will not be able to register your health post.",
       });
     }
     const { cnpj } = req.body;
-    const healthCenterExist = await HealthCenterSchema.findOne({
+    const healthPostExist = await HealthPostSchema.findOne({
       cnpj,
     });
-    if (healthCenterExist) {
+    if (healthPostExist) {
       return res.status(406).json({
         message:
-          "This health center has already been registered. Sorry, to preserve the security of our api, it will not be possible to register the same CNPJ.",
+          "This health post has already been registered. Sorry, to preserve the security of our api, it will not be possible to register the same CNPJ.",
       });
     }
     const { email } = req.body;
-    const healthCenter_Exist = await HealthCenterSchema.findOne({
+    const healthPost_Exist = await HealthPostSchema.findOne({
       email,
     });
-    if (healthCenter_Exist) {
+    if (healthPost_Exist) {
       return res.status(406).json({
         message:
-          "Sorry, this e-mail has already been registered. Please use a new email address to register your health center.",
+          "Sorry, this e-mail has already been registered. Please use a new email address to register your health post.",
       });
     }
-    const savedHealthCenter = await newHealthCenter.save();
+    const savedHealthpost = await newHealthPost.save();
     res.status(200).json({
-      message: `${newHealthCenter.types_of_healthcare_facilities}: ${newHealthCenter.healthcenter_name}, was registered successfully!`,
-      savedHealthCenter,
+      message: `${newHealthPost.types_of_healthcare_facilities}: ${newHealthPost.health_post_name}, was registered successfully!`,
+      savedHealthpost,
     });
   } catch (e) {
     res.status(500).json({
@@ -303,62 +316,63 @@ const registerHealthCenter = async (req, res) => {
   }
 };
 
-const searchHealthCenterById = async (req, res) => {
+const searchHealthPostById = async (req, res) => {
   try {
-    const healthCenterFound = await HealthCenterSchema.findById(req.params.id);
-    if (healthCenterFound) {
+    const healthPostFound = await HealthPostSchema.findById(req.params.id);
+    if (healthPostFound) {
       res.status(200).json({
-        message: `The ${healthCenterFound.healthcenter_name} health center was found:`,
-        healthCenterFound,
+        message: `The ${healthPostFound.health_post_name} health post was found:`,
+        healthPostFound,
       });
     }
   } catch (e) {
     res.status(500).json({
-      message: `This health center could not be found. Please check if the id exists or try again later! ${e.message}`,
+      message: `This health post could not be found. Please check if the id exists or try again later! ${e.message}`,
     });
   }
 };
 
-const updateHealthCenterById = async (req, res) => {
+const updateHealthPostById = async (req, res) => {
   try {
-    const healthCenterFound = await HealthCenterSchema.findById(req.params.id);
-    if (healthCenterFound) {
-      healthCenterFound.healthcenter_name =
-        req.body.healthcenter_name || healthCenterFound.healthcenter_name;
-      healthCenterFound.address = req.body.address || healthCenterFound.address;
-      healthCenterFound.municipality =
-        req.body.municipality || healthCenterFound.municipality;
-      healthCenterFound.zip_code =
-        req.body.zip_code || healthCenterFound.zip_code;
-      healthCenterFound.healthcenter_number =
-        req.body.healthcenter_number || healthCenterFound.healthcenter_number;
-      healthCenterFound.cnpj = req.body.cnpj || healthCenterFound.cnpj;
-      healthCenterFound.email = req.body.email || healthCenterFound.email;
-      healthCenterFound.telephone =
-        req.body.telephone || healthCenterFound.telephone;
-      healthCenterFound.days_open =
-        req.body.days_open || healthCenterFound.days_open;
-      healthCenterFound.hours_of_operation =
-        req.body.hours_of_operation || healthCenterFound.hours_of_operation;
+    const healthPostFound = await HealthPostSchema.findById(req.params.id);
+    if (healthPostFound) {
+      healthPostFound.health_post_name =
+        req.body.health_post_name || healthPostFound.health_post_name;
+      healthPostFound.address = req.body.address || healthPostFound.address;
+      healthPostFound.neighborhood = req.body.neighborhood || healthPostFound.neighborhood;
+      healthPostFound.municipality =
+        req.body.municipality || healthPostFound.municipality;
+      healthPostFound.zip_code =
+        req.body.zip_code || healthPostFound.zip_code;
+      healthPostFound.health_post_number =
+        req.body.health_post_number || healthPostFound.health_post_number;
+      healthPostFound.cnpj = req.body.cnpj || healthPostFound.cnpj;
+      healthPostFound.email = req.body.email || healthPostFound.email;
+      healthPostFound.telephone =
+        req.body.telephone || healthPostFound.telephone;
+      healthPostFound.days_open =
+        req.body.days_open || healthPostFound.days_open;
+      healthPostFound.hours_of_operation =
+        req.body.hours_of_operation || healthPostFound.hours_of_operation;
     }
     if (
-     healthCenterFound.zip_code.length < 9 ||
-     healthCenterFound.zip_code.length > 9
+     healthPostFound.zip_code.length < 9 ||
+     healthPostFound.zip_code.length > 9
     ) {
       return res.status(406).json({
         message: "Error, the zip code must only have 9 numbers.",
         message_example: " xxxxx-xxx .",
       });
     }
-    if (healthCenterFound.healthcenter_number.length > 4) {
+    if (healthPostFound.health_post_number.length > 4) {
       return res.status(406).json({
         message: "Error, the health center number must have up to 4 numbers.",
         message_examples: " x or xx or xxx or xxxx .",
       });
     }
     if (
-      healthCenterFound.cnpj.length < 18 ||
-      healthCenterFound.cnpj.length > 18
+      healthPostFound.cnpj.length < 18 ||
+      healthPostFound.cnpj.length > 18
     ) {
       return res.status(406).json({
         message: "Error, the CNPJ must only have 18 numbers.",
@@ -366,8 +380,8 @@ const updateHealthCenterById = async (req, res) => {
       });
     }
     if (
-      healthCenterFound.telephone.length < 13 ||
-      healthCenterFound.telephone.length > 13
+      healthPostFound.telephone.length < 13 ||
+      healthPostFound.telephone.length > 13
     ) {
       return res.status(406).json({
         message: "Error, the phone must only have 14 numbers.",
@@ -375,11 +389,11 @@ const updateHealthCenterById = async (req, res) => {
       });
     }
     if (req.body.has_endocrinologist_doctors == false) {
-      healthCenterFound.has_endocrinologist_doctors =
+      healthPostFound.has_endocrinologist_doctors =
         req.body.has_endocrinologist_doctors;
     }
     if (req.body.has_endocrinologist_doctors == true) {
-      healthCenterFound.has_endocrinologist_doctors =
+      healthPostFound.has_endocrinologist_doctors =
         req.body.has_endocrinologist_doctors;
     }
     if (
@@ -403,7 +417,7 @@ const updateHealthCenterById = async (req, res) => {
           "Error, if there are no doctors available for diabetic people, the quantity should be '0'.",
       });
     } else {
-      healthCenterFound.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist =
+      healthPostFound.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist =
         req.body.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist;
     }
     if (
@@ -427,15 +441,15 @@ const updateHealthCenterById = async (req, res) => {
           "Error, if you have doctors available, you will have tickets available for diabetic people.",
       });
     } else {
-      healthCenterFound.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist =
+      healthPostFound.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist =
         req.body.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist;
     }
     if (req.body.availability_of_supplies_for_diabetic_people == false) {
-      healthCenterFound.availability_of_supplies_for_diabetic_people =
+      healthPostFound.availability_of_supplies_for_diabetic_people =
         req.body.availability_of_supplies_for_diabetic_people;
     }
     if (req.body.availability_of_supplies_for_diabetic_people == true) {
-      healthCenterFound.availability_of_supplies_for_diabetic_people =
+      healthPostFound.availability_of_supplies_for_diabetic_people =
         req.body.availability_of_supplies_for_diabetic_people;
     }
     if (
@@ -455,7 +469,7 @@ const updateHealthCenterById = async (req, res) => {
           "Error, if there are no supplies available for diabetic people, the quantity should be '0'.",
       });
     } else {
-      healthCenterFound.how_many_supplies_are_available_for_diabetics =
+      healthPostFound.how_many_supplies_are_available_for_diabetics =
         req.body.how_many_supplies_are_available_for_diabetics;
     }
     if (
@@ -475,32 +489,32 @@ const updateHealthCenterById = async (req, res) => {
           "Error, the amount of supplies available for diabetic people should be greater than zero.",
       });
     } else {
-      healthCenterFound.how_many_supplies_are_available_for_diabetics =
+      healthPostFound.how_many_supplies_are_available_for_diabetics =
         req.body.how_many_supplies_are_available_for_diabetics;
     }
     const { cnpj } = req.body;
-    const healthCenterExist = await HealthCenterSchema.findOne({
+    const healthPostExist = await HealthPostSchema.findOne({
       cnpj,
     });
-    if (healthCenterExist) {
+    if (healthPostExist) {
       return res.status(406).json({
         message:
-          "Sorry, this CNPJ already exists. Please enter a new CNPJ to update your health center or leave the field empty to continue with the same CNPJ.",
+          "Sorry, this CNPJ already exists. Please enter a new CNPJ to update your health post or leave the field empty to continue with the same CNPJ.",
       });
     }
     const { email } = req.body;
-    const healthCenter_Exist = await HealthCenterSchema.findOne({
+    const healthPost_Exist = await HealthPostSchema.findOne({
       email,
     });
-    if (healthCenter_Exist) {
+    if (healthPost_Exist) {
       return res.status(406).json({
         message:
-          "Sorry, this e-mail already exists. Please enter a new e-mail to update your health center or leave the field empty to continue with the same e-mail.",
+          "Sorry, this e-mail already exists. Please enter a new e-mail to update your health post or leave the field empty to continue with the same e-mail.",
       });
     }
-    const savedHealthCenter = await healthCenterFound.save();
+    const savedhealthPost = await healthPostFound.save();
     res.status(200).json({
-      message: `The ${savedHealthCenter.healthcenter_name} health center has been successfully updated!`,
+      message: `The ${savedhealthPost.health_post_name} health post has been successfully updated!`,
     });
   } catch (e) {
     res.status(500).json({
@@ -509,21 +523,21 @@ const updateHealthCenterById = async (req, res) => {
   }
 };
 
-const deleteHealthCenterById = async (req, res) => {
+const deleteHealthPostById = async (req, res) => {
   try {
-    const id_healthCenter = req.params.id;
-    const healthCenterFound = await HealthCenterSchema.findOne({
-      _id: id_healthCenter,
+    const id_healthpost = req.params.id;
+    const healthPostFound = await HealthPostSchema.findOne({
+      _id: id_healthpost,
     });
-    if (!healthCenterFound) {
+    if (!healthPostFound) {
       return res.status(404).json({
-        message: `This health center could not be found. Please check if the id exists.`,
+        message: `This health post could not be found. Please check if the id exists.`,
       });
     } else {
-      HealthCenterSchema.deleteOne({ _id: id_healthCenter }, function (err) {
+      HealthPostSchema.deleteOne({ _id: id_healthpost }, function (err) {
         if (!err) {
           return res.status(200).send({
-            message: `The ${healthCenterFound.healthcenter_name} health center was successfully deleted.`,
+            message: `The ${healthPostFound.health_post_name} health post was successfully deleted.`,
           });
         }
       });
@@ -555,12 +569,12 @@ function checkToken(req, res, next) {
 }
 
 module.exports = {
-  findAllHealthCenters,
-  searchAllHealthCentersByName,
-  searchAllHealthCentersByMunicipality,
-  registerHealthCenter,
-  searchHealthCenterById,
-  updateHealthCenterById,
-  deleteHealthCenterById,
+  findAllHealthPosts,
+  searchAllHealthPostsByName,
+  searchAllHealthPostsByMunicipality,
+  registerHealthPost,
+  searchHealthPostById,
+  updateHealthPostById,
+  deleteHealthPostById,
   checkToken,
 };

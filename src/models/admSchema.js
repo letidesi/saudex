@@ -16,6 +16,10 @@ const admSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    terms_of_use: {
+      type: Boolean,
+      required: true,
+    },
   },
   { timestamps: true }
 );

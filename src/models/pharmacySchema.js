@@ -26,6 +26,10 @@ const pharmacySchema = new mongoose.Schema(
       uppercase: true,
       required: true,
     },
+    neighborhood: {
+      type: String,
+      required: true,
+    },
     zip_code: {
       type: String,
       required: true,
@@ -57,6 +61,10 @@ const pharmacySchema = new mongoose.Schema(
       required: true,
     },
     accredited_in_the_popular_pharmacy_program: {
+      type: Boolean,
+      required: true,
+    },
+    terms_of_use: {
       type: Boolean,
       required: true,
     },

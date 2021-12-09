@@ -69,6 +69,7 @@ const registeringHospitals = async (req, res) => {
       address: req.body.address,
       municipality: req.body.municipality,
       state: req.body.state,
+      neighborhood: req.body.neighborhood,
       zip_code: req.body.zip_code,
       hospital_number: req.body.hospital_number,
       cnpj: req.body.cnpj,
@@ -84,6 +85,7 @@ const registeringHospitals = async (req, res) => {
         req.body.availability_of_supplies_for_diabetic_people,
       how_many_supplies_are_available_for_diabetics:
         req.body.how_many_supplies_are_available_for_diabetics,
+      terms_of_use: req.body.terms_of_use,
     });
     if (newHospital.types_of_healthcare_facilities !== "HOSPITAL") {
       return res.status(406).json({
@@ -114,6 +116,11 @@ const registeringHospitals = async (req, res) => {
     if (!newHospital.state) {
       return res.status(406).json({
         message: "The state of the hospital is required.",
+      });
+    }
+    if (!newHospital.neighborhood) {
+      return res.status(406).json({
+        message: "The name of the neighborhood is required.",
       });
     }
     if (!newHospital.zip_code) {
@@ -260,21 +267,27 @@ const registeringHospitals = async (req, res) => {
           "The amount of inputs for diabetic people must be greater than or equal to zero for us to register your health center.",
       });
     }
+    if (!newHospital.terms_of_use) {
+      return res.status(406).json({
+        message:
+          "Sorry, unfortunately when you inform us that you do not accept our terms of use, we will not be able to register your hospital.",
+      });
+    }
     const { cnpj } = req.body;
-    const healthCenterExist = await HospitalSchema.findOne({
+    const hospitalExist = await HospitalSchema.findOne({
       cnpj,
     });
-    if (healthCenterExist) {
+    if (hospitalExist) {
       return res.status(406).json({
         message:
           "This hospital has already been registered. Sorry, to preserve the security of our api, it will not be possible to register the same CNPJ.",
       });
     }
     const { email } = req.body;
-    const healthCenter_Exist = await HospitalSchema.findOne({
+    const hospital_Exist = await HospitalSchema.findOne({
       email,
     });
-    if (healthCenter_Exist) {
+    if (hospital_Exist) {
       return res.status(406).json({
         message:
           "Sorry, this e-mail has already been registered. Please use a new email address to register your health center.",

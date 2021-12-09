@@ -27,7 +27,8 @@ const findAllAdm = async (req, res) => {
 
 const createAdm = async (req, res) => {
   try {
-    const { username, email, password, confirmpassword } = req.body;
+    const { username, email, password, confirmpassword, terms_of_use } =
+      req.body;
 
     if (!username) {
       return res.status(406).json({
@@ -63,7 +64,14 @@ const createAdm = async (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password: passwordHash,
+      terms_of_use: req.body.terms_of_use,
     });
+    if (!terms_of_use) {
+      return res.status(406).json({
+        message:
+          "Sorry, unfortunately if you inform us that you do not accept our terms of use, we will not be able to complete your registration.",
+      });
+    }
     const savedAdmin = await newAdmin.save();
     res.status(200).json({
       message: "Administrator successfully registered! (:",
