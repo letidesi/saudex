@@ -1,4 +1,4 @@
-On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em desenvolvimento... ✍** 
+On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concluído 💜** 
 
 <img src="assets/saudex.png">
 
@@ -26,43 +26,54 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 <br>
 
 ## **Origem da API Saudex**
-> <h4> O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema do plural da palavra saúdes.
+> O contexto geral sobre este projeto é extremamente revoltante e triste.
 
 <br>
 
-> <h4> No entanto, o contexto geral sobre esta ideia é extremamente revoltante e triste. Durante anos, verificou-se ralatos, não somente através de Victor Soares mas de outros cidadãos, o descaso do Ministério da Saúde com as pessoas nos quais fazem o uso de insulina, que precisam de insumos gratuitos para gerar um controle maior sobre sua saúde e sua rotina diária. 
-<br>
-
-> <h4> Consequentemente durante a pandemia aconteceu um aumento nesses relatos. No ano de 2020 à 2021, acompanhei uma experiência pessoal ruim com um amigo, Victor Soares; Me informou que não havia conseguido adquirir fitas para medir sua glicose, não existia um aplicativo funcional ou gratuito para o auxiliar melhor em como, por exemplo, encontrar médicos endocrinologistas, no qual se tornava uma situação frustrante, atrapalhava seu emocional, sua rotina e seu dia-dia, além do medo de ocorrer alguma coisa mais grave.
+>  Durante anos houveram relatos não somente através do meu amigo Victor Soares, mas de outros cidadãos, sobre o descaso do Ministério da Saúde com as pessoas que fazem o uso de insulina e demais insumos gratuitos para gerar um controle maior sobre sua saúde e sua rotina diária.
 
 <br>
 
-> <h4> Como se não bastasse, neste mesmo período de ano, perdi meu cunhado, André Marcos, vítima da leucemia e minha prima, Sabrina Thomaz, vítima da rejeição do transplante de coração. Sendo eles, duas pessoas incríveis quais desfrutei do prazer de conhecer, conviver... Infelizmente, nos deixaram cedo demais, são duas pessoas as quais viveram, amaram à vida cada segundo, aproveitaram todos os momentos, duas pessoas guerreiras, duas pessoas fortes, que nos ensinou muito, são duas pessoas quais se estabeleceram em nossos corações e, com certeza, marcaram nossas almas e encontraram-se para sempre em nossas memórias.
+> Com a chegada da Pandemia do Covid-19, consequentemente ocorreu um aumento nesses relatos.
 
 <br>
 
-> <h4> Como resultado deste período do ano de 2020 à 2021, nasceu o sentimento de impotência, o pesar em não ter a influência necessária para ajudar amenizar o sofrimento daqueles que amamos. Portanto, analisando tudo que aconteceu até o atual momento, realizei a criação da API Saudex, uma inspiração que surgiu através de dor e perda.
+> Entre os anos de 2020 à 2021, tive uma experiência pessoal negativa acompanhando o Victor Soares. Diabético, ele me informou que não havia conseguido adquirir fitas para medir sua glicose e não existia um aplicativo funcional ou gratuito para o auxiliar em como, por exemplo, encontrar médicos endocrinologistas, e essa situação se tornava frustrante, atrapalhava seu emocional, sua rotina e seu dia-dia, além do medo de ocorrer algo mais grave.
 
 <br>
 
+> Como se não bastasse, neste mesmo período perdi meu cunhado André Marcos, vítima de leucemia e minha prima Sabrina Thomaz, vítima da rejeição de um transplante de coração, sendo duas pessoas incríveis as quais desfrutei do prazer de conhecer, conviver... Infelizmente, nos deixaram cedo demais, são duas pessoas as quais viveram, amaram à vida cada segundo, aproveitaram todos os momentos. Duas pessoas guerreiras, duas pessoas fortes, que nos ensinaram muito. São duas pessoas as quais se estabeleceram em nossos corações e, com certeza, marcaram nossas almas e encontram-se para sempre em nossas memórias.
+
 <br>
+
+>  Como resultado deste período do ano de 2020 à 2021, nasceu o sentimento de impotência, o pesar em não ter a influência necessária para ajudar amenizar o sofrimento daqueles que amamos. Portanto, analisando tudo que aconteceu até o atual momento, realizei a criação da API Saudex, uma inspiração que surgiu através de dor e perda.
+
+<br>
+
+> O termo Saudex é formado pela junção da palavra saudade com a semelhança do fonema da palavra saúde.
+
+<br>
+
 
 # **Objetivo**
 
-> <h4> A API Saudex, possui como o seu principal objetivo a importância de ajudar pessoas diabéticas que fazem uso de insulinas e que tem a necessidade de insumos gratuitos. 
-<br>
-
-> <h4> Para atingirmos este objetivo, realizaremos os cadastros de Administradores, os tornando administrantes da nossa API Saudex e, por isso, serão capazes de realizarem o login, desse modo, ocasionará automaticamente um token ou chave, como costumamos chamar, através deste token obtido os administrantes conseguirão registrar os Hospitais, Postos de Saúde e Farmácias, somente as que são credenciadas no “Programa Farmácia Popular”. 
-<br>
-
-> <h4> Além disso, com os estabelecimentos acima cadastrados com sucesso em nosso banco de dados, os administrantes e usuários comuns, terão a possibilidade de pesquisar pela nossa API Saudex, a qual informará onde encontrá-los dentre o estado do Rio de Janeiro, e também, pesquisá-los por município, por nome e por id; Para pesquisar por id é obrigatório realização do login como administrador. 
+>  A API Saudex, possui como o seu principal objetivo a importância de ajudar pessoas diabéticas que fazem uso de insulinas e que tem a necessidade de insumos gratuitos.
 
 <br>
 
-> <h4> Além de, encontrar médicos endocrinologistas, saber as quantidades de insumos disponíveis para estas pessoas e informar as quantidades de senhas disponibilizadas para o atendimento.  
+>  Para atingirmos este objetivo, realizaremos os cadastros de Administradores, tornando-os administrantes da nossa API Saudex. Eles e serão capazes de realizar o login, gerando automaticamente um token ou chave e através deste, conseguirão registrar os Hospitais, Postos de Saúde e Farmácias, mas somente as que são credenciadas no “Programa Farmácia Popular”.
+
 <br>
 
-> <h4>  Em resumo, a Saudex foi desenvolvida com o propósito de indicar aos nossos usuários, os quais sofrem com a diabetes, em qual centro médico encontrar, primordialmente, médicos e insumos gratuitamente, que sejam mais próximo de sua residência, entre outras finalidades.
+> Com os estabelecimentos referidos acima cadastrados em nosso banco de dados, os administrantes e usuários comuns terão a possibilidade de pesquisar pela nossa API Saudex, que informará onde encontrá-los no estado do Rio de Janeiro. A pesquisa poderá ser feita por município, por nome e por id, sendo que o último é obrigatório realização do login como administrador.
+
+<br>
+
+> Será possivel também encontrar médicos endocrinologistas, saber as quantidades de insumos disponíveis e informar as quantidades de senhas disponibilizadas para o atendimento.
+
+<br>
+
+> Em resumo, a Saudex foi desenvolvida com o propósito de indicar aos nossos usuários que sofrem com a diabetes em qual centro médico encontrar, primordialmente, médicos e insumos gratuitamente, que sejam mais próximo de sua residência entre outras finalidades.
 
 <br>
 
@@ -141,7 +152,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
  -  Informando todos os centros médicos que dispõe de médicos endocrinologistas. ✅
  
- - Informando todos os centros médicos que dispõe de insumos para diabetes ✅
+ - Informando todos os centros médicos que dispõe de insumos para diabetes. ✅
 
  <p p align="center"><img src="assets/saudexgif.gif"></img></p>
 
@@ -179,19 +190,22 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **Em de
 
 ## **Instruções de Instalação da API Saudex** 
 
-<h4> Antes de tudo, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do <a href="https://code.visualstudio.com/download"> Visual Studio Code </a>. Além disso, para verificar se as modificações foram realizadas com sucesso, deixaremos o link para instalação de um banco de dados NoSQL, de nossa preferência, o <a href="https://www.mongodb.com/try/download/community">MongoDB</a>. E também, deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e comparatilhar APIs, são eles: 
- o <a href="https://www.postman.com/downloads/">Postman</a> e o <a href="https://insomnia.rest/download">Insomnia</a>; E por favor, escolha a versão de acordo com o seu sistema.
+ Antes de começar, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do  <a href="https://code.visualstudio.com/download">Visual Studio Code</a> e <a href="https://nodejs.org/en/download/">Node.js.</a>
+Para verificar se as modificações foram realizadas com sucesso, deixaremos o link para instalação de um banco de dados NoSQL, preferencialmente, o <a href="https://www.mongodb.com/try/download/community">MongoDB.</a>
+Deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e comparatilhar APIs, são eles: o   <a href="https://www.postman.com/downloads/">Postman</a> e o </a>  <a href="https://insomnia.rest/download">Insomnia.</a>
 
-Após isso, é necessário realizar também o download e concluir instalação do <a href="https://nodejs.org/en/download/"> Node.js</a>; E novamente, escolha a versão de acordo com o seu sistema. 
+**IMPORTANTE**: Sempre escolha versão de acordo com o seu sistema, não se esqueça!
 
-Dito isto, siga o processo abaixo:
+
+
+Feito isto, siga o processo abaixo:
 
  - Faça um fork da API Saudex:
 <p align="center"> 
    <img align="center" src="assets/fork.jpg" width="250">
 </p>
 
- - Na sua área de trabalho, dê um clique no lado esquerdo do mouse ou direito, caso você seja canhota, abra o terminal git bash here:
+ - Na sua área de trabalho, clique no botão esquerdo do mouse ou no direito caso você seja canhota, abra o terminal git bash here:
 
 <p align="center"> 
    <img src="assets/gitbash.jpg" height="250" >
@@ -203,9 +217,10 @@ Dito isto, siga o processo abaixo:
 
 - Para os que desejam criar modificações no código, crie uma nova branch:
 
+
       git checkout -b nome-da-sua-branch
 
-- (Obs: os que não desejarem modificar, não crie uma nova branch, apenas pule para próxima etapa)
+- (**Obs**: Se não deseja realizar modificações, apenas pule para próxima etapa)
 
 - Entre na pasta da API Saudex:
 
@@ -237,7 +252,7 @@ Dito isto, siga o processo abaixo:
       CREATE (CRIAR)
       READ (LER, CONSULTAR)
       UPDATE (ATUALIZAR) 
-      DELETE (DESTRUIÇÃO, REMOÇÃO).
+      DELETE (DESTRUIÇÃO, REMOÇÃO)
 
 <br>
 
@@ -362,14 +377,15 @@ Dito isto, siga o processo abaixo:
 
 ##  **Agradecimentos**
 
-<h4>
+<br>
 <p>
-  Muitas pessoas me ajudaram  na criação deste projeto, para alcançar este objetivo apresentou-se um alicerce colossal e extraordinário, e sou extremamente grata a elas pela sua participação durante as semanas que trabalhei nele: </p>
+ Muitas pessoas me ajudaram na criação deste projeto e no alcance deste objetivo e representaram um alicerce colossal e extraordinário, sou extremamente grata a elas pela participação durante as semanas que trabalhei nele: </p>
 <p> A Maria Doroteia e ao Mário Vilmar, meus pais, obrigada por todo o suporte, amparo, e ter acreditado sempre no meu processo.
-<p> A minha querida prima <a href="https://www.instagram.com/may_desiderio/">Mayara Desiderio</a>, a minha doce Samara Thomaz, a minha segunda "mãe" <a href="https://www.instagram.com/arina_desouza/p/B2uGhalB6Zp/?utm_medium=copy_link"> Àrina Valtiery</a> e ao <a href="https://www.instagram.com/ctorsoares/?utm_medium=copy_link">Victor Soares</a>, pela paciência, apoio, por permanecerem sempre comigo nos bons e maus momentos e tornassem minha segunda família.</p>
+<p> A minha querida prima <a href="https://www.instagram.com/may_desiderio/">Mayara Desiderio</a>, a minha doce Samara Thomaz, a minha segunda "mãe" <a href="https://www.instagram.com/arina_desouza/p/B2uGhalB6Zp/?utm_medium=copy_link"> Àrina Valtiery</a> e ao <a href="https://www.instagram.com/ctorsoares/?utm_medium=copy_link">Victor Soares</a>, pela paciência, apoio, por permanecerem sempre comigo nos bons e maus momentos e tornaram-se  minha segunda família.</p>
 <p> A todas minhas colegas e amigas que fizeram parte da <a href="https://www.linkedin.com/company/reprogramabr/">{Reprograma}</a> junto comigo, gostaria de, particulamente, agradecer a <a href="https://www.linkedin.com/in/amanda-santos-b50200165/">Amanda Leal</a> pela assistência emocional e <a href="https://www.linkedin.com/in/xeniabarreto">Xênia Barreto</a> pelo auxílio no momento de codar.</p>
-<p> Por último, não menos importante, agradeço também as minhas professoras, monitoras que me orientou a cada momento deste projeto.
-</h3>
+<p> Por último e não menos importante, agradeço também as minhas professoras e monitoras que me orientaram a cada momento deste projeto.
+
+
 <br>
 
 <br>
