@@ -241,8 +241,8 @@ Feito isto, siga o processo abaixo:
 <br>
 
 ## **Aprendizados**
-
-<h4> A construção deste projeto final, consiste nesta API fundamentada no CRUD com a integração do banco de dados NoSQL, o MongoDB. 
+<br>
+<p> A construção deste projeto final, consiste nesta API fundamentada no CRUD com a integração do banco de dados NoSQL, o MongoDB. 
 <br>
 <br>
 
@@ -261,7 +261,7 @@ Feito isto, siga o processo abaixo:
 ##  **Rotas Públicas**
 
     Nome da rota principal = Saudex
-<h4>
+
 
 |  **_{GET}_** | Retornar |
 | ------------------- | :-------------------: |
@@ -345,7 +345,7 @@ Feito isto, siga o processo abaixo:
 | /hospital/delete/:id | Deletar os registros dos Hospitais. |
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
 
-</h4>
+
 
 <br>
 
