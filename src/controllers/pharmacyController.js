@@ -253,6 +253,8 @@ const updatePharmacyById = async (req, res) => {
       pharmacyFound.municipality =
         req.body.municipality || pharmacyFound.municipality;
       pharmacyFound.zip_code = req.body.zip_code || pharmacyFound.zip_code;
+      pharmacyFound.neighborhood =
+        req.body.neighborhood || pharmacyFound.neighborhood;
       pharmacyFound.pharmacy_number =
         req.body.pharmacy_number || pharmacyFound.pharmacy_number;
       pharmacyFound.cnpj = req.body.cnpj || pharmacyFound.cnpj;
@@ -318,7 +320,9 @@ const updatePharmacyById = async (req, res) => {
     });
   } catch (e) {
     res.status(500).json({
-      message: e.message,
+      message:
+        "This pharmacy could not be found. Please check if the id exists or try again later! " +
+        e.message,
     });
   }
 };

@@ -328,6 +328,8 @@ const updateHospitalById = async (req, res) => {
       hospitalFound.municipality =
         req.body.municipality || hospitalFound.municipality;
       hospitalFound.zip_code = req.body.zip_code || hospitalFound.zip_code;
+      hospitalFound.neighborhood =
+        req.body.neighborhood || hospitalFound.neighborhood;
       hospitalFound.hospital_number =
         req.body.hospital_number || hospitalFound.hospital_number;
       hospitalFound.cnpj = req.body.cnpj || hospitalFound.cnpj;
@@ -497,7 +499,9 @@ const updateHospitalById = async (req, res) => {
     });
   } catch (e) {
     res.status(500).json({
-      message: `This hospital could not be found. Please check if the id exists or try again later! ${e.message}`,
+      message:
+        "This hospital could not be found. Please check if the id exists or try again later! " +
+        e.message,
     });
   }
 };

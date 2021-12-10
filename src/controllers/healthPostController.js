@@ -39,8 +39,6 @@ const searchAllHealthPostsByName = async (req, res) => {
   }
 };
 
-
-
 const searchAllHealthPostsByMunicipality = async (req, res) => {
   try {
     const municipalityFound = await HealthPostSchema.find({
@@ -61,7 +59,6 @@ const searchAllHealthPostsByMunicipality = async (req, res) => {
     });
   }
 };
-
 
 const registerHealthPost = async (req, res) => {
   try {
@@ -88,7 +85,7 @@ const registerHealthPost = async (req, res) => {
         req.body.availability_of_supplies_for_diabetic_people,
       how_many_supplies_are_available_for_diabetics:
         req.body.how_many_supplies_are_available_for_diabetics,
-        terms_of_use: req.body.terms_of_use
+      terms_of_use: req.body.terms_of_use,
     });
     if (newHealthPost.types_of_healthcare_facilities !== "POSTO DE SAÚDE") {
       return res.status(406).json({
@@ -100,8 +97,7 @@ const registerHealthPost = async (req, res) => {
     }
     if (newHealthPost.state !== "RIO DE JANEIRO") {
       return res.status(406).json({
-        message:
-          "We can only register health post located in Rio de Janeiro.",
+        message: "We can only register health post located in Rio de Janeiro.",
       });
     }
     if (!newHealthPost.health_post_name) {
@@ -223,7 +219,7 @@ const registerHealthPost = async (req, res) => {
       newHealthPost.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist >
         0
     ) {
-     return res.status(406).json({
+      return res.status(406).json({
         message:
           "Error, without a doctor, you won't have a ticket for diabetic people.",
       });
@@ -232,7 +228,7 @@ const registerHealthPost = async (req, res) => {
       newHealthPost.how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist ==
         0
     ) {
-     return res.status(406).json({
+      return res.status(406).json({
         message:
           "Error, if you have a doctor available, you will have a ticket for diabetic people.",
       });
@@ -241,7 +237,7 @@ const registerHealthPost = async (req, res) => {
       newHealthPost.availability_of_supplies_for_diabetic_people == false &&
       newHealthPost.how_many_supplies_are_available_for_diabetics > 0
     ) {
-     return res.status(406).json({
+      return res.status(406).json({
         message:
           "Error, if you don't have supplies available, you won't have a quantity of supplies for diabetic people.",
       });
@@ -339,11 +335,11 @@ const updateHealthPostById = async (req, res) => {
       healthPostFound.health_post_name =
         req.body.health_post_name || healthPostFound.health_post_name;
       healthPostFound.address = req.body.address || healthPostFound.address;
-      healthPostFound.neighborhood = req.body.neighborhood || healthPostFound.neighborhood;
+      healthPostFound.neighborhood =
+        req.body.neighborhood || healthPostFound.neighborhood;
       healthPostFound.municipality =
         req.body.municipality || healthPostFound.municipality;
-      healthPostFound.zip_code =
-        req.body.zip_code || healthPostFound.zip_code;
+      healthPostFound.zip_code = req.body.zip_code || healthPostFound.zip_code;
       healthPostFound.health_post_number =
         req.body.health_post_number || healthPostFound.health_post_number;
       healthPostFound.cnpj = req.body.cnpj || healthPostFound.cnpj;
@@ -356,8 +352,8 @@ const updateHealthPostById = async (req, res) => {
         req.body.hours_of_operation || healthPostFound.hours_of_operation;
     }
     if (
-     healthPostFound.zip_code.length < 9 ||
-     healthPostFound.zip_code.length > 9
+      healthPostFound.zip_code.length < 9 ||
+      healthPostFound.zip_code.length > 9
     ) {
       return res.status(406).json({
         message: "Error, the zip code must only have 9 numbers.",
@@ -370,10 +366,7 @@ const updateHealthPostById = async (req, res) => {
         message_examples: " x or xx or xxx or xxxx .",
       });
     }
-    if (
-      healthPostFound.cnpj.length < 18 ||
-      healthPostFound.cnpj.length > 18
-    ) {
+    if (healthPostFound.cnpj.length < 18 || healthPostFound.cnpj.length > 18) {
       return res.status(406).json({
         message: "Error, the CNPJ must only have 18 numbers.",
         message_example: " xx.xxx.xxx/xxxx-xx .",
@@ -518,7 +511,9 @@ const updateHealthPostById = async (req, res) => {
     });
   } catch (e) {
     res.status(500).json({
-      message: e.message,
+      message:
+        "This health post could not be found. Please check if the id exists or try again later! " +
+        e.message,
     });
   }
 };

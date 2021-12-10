@@ -158,12 +158,14 @@ const updateAdmById = async (req, res) => {
     }
     const admSaved = await admFound.save();
     res.status(200).json({
-      message: "ok",
-      admFound,
+      message: `admnistrator ${admSaved.username} successfully updated. `,
+      admSaved,
     });
   } catch (e) {
     res.status(500).json({
-      message: e.message,
+      message:
+        "Error, this administrator does not exist, please update or try again later!" +
+        e.message,
     });
   }
 };
