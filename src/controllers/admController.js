@@ -57,8 +57,8 @@ const createAdm = async (req, res) => {
           "This e-mail has already been registered, please use another e-mail.",
       });
     }
-    const salt = await bcrypt.genSalt(12);
-    const passwordHash = await bcrypt.hash(password, salt);
+    const salt = await bcrypt.genSalt(12); 
+    const passwordHash = await bcrypt.hash(password, salt); 
     const newAdmin = new AdmSchema({
       _id: new mongoose.Types.ObjectId(),
       username: req.body.username,
