@@ -6,7 +6,7 @@ router.get("/hospital", controllerHospital.checkToken, controllerHospital.findAl
 router.get("/hospital/search/name", controllerHospital.checkToken, controllerHospital.searchAllHospitalsByName);
 router.get("/hospital/search/municipality", controllerHospital.checkToken, controllerHospital.searchAllHospitalsByMunicipality);
 router.post("/hospital/register", controllerHospital.checkToken, controllerHospital.registeringHospitals);
-router.get("/hospital/search/:id", controllerHospital.searchHospitalById);
+router.get("/hospital/search/:id", controllerHospital.checkToken, controllerHospital.searchHospitalById);
 router.put("/hospital/update/:id", controllerHospital.checkToken, controllerHospital.updateHospitalById);
 router.delete("/hospital/delete/:id", controllerHospital.checkToken, controllerHospital.deleteHospitalById);
 

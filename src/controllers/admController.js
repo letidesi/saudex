@@ -140,7 +140,8 @@ const searchAdminById = async (req, res) => {
   } catch (e) {
     res.status(500).json({
       message:
-        "Error, this administrator does not exist, please register or try again later!",
+        "Error, this administrator does not exist, please register or try again later!" + 
+        e.message,
     });
   }
 };
