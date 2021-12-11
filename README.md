@@ -15,8 +15,10 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 - [Bibliotecas Aplicadas](#bibliotecas-aplicadas)
 - [Instruções de Instalação da API Saudex](#instruções-de-instalação-da-api-saudex)
 - [Aprendizados](#aprendizados)
+- [Portas](#portas)
 - [Rotas Públicas](#rotas-públicas)
 - [Rotas Privadas](#rotas-privadas)
+- [Melhorias Futuras API Saudex](#melhorias-futuras-api-saudex)
 - [Referências](#referências)
 - [Agradecimentos](#agradecimentos)
 
@@ -359,12 +361,11 @@ Feito isto, siga o processo abaixo:
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
 
 
-
 <br>
 
 <br>
 
-##  **Melhorias Futuras - API Saudex -**
+##  **Melhorias Futuras API Saudex**
 
 - Localizar todos os centros médicos e farmácias por gps;
 
