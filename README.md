@@ -260,9 +260,19 @@ Feito isto, siga o processo abaixo:
 
 <br>
 
+##  **Portas**
+
+- Local: http://localhost:4000 - **Para rodar a API Saudex localmente**.
+
+- Heroku: https://saudex-heroku.herokuapp.com/ - **Para consumir a API Saudex**.
+
+<br>
+
+<br>
+
 ##  **Rotas Públicas**
 
-    Nome da rota principal = Saudex
+    Nome da rota principal = /saudex
 
 
 |  **_{GET}_** | Retornar |
@@ -286,7 +296,7 @@ Feito isto, siga o processo abaixo:
 
 ##  **Rotas Privadas**
 
-     Nome da rota principal = Saudex
+     Nome da rota principal = /saudex
         
 
 | **_{GET}_** | Retornar |
@@ -354,6 +364,21 @@ Feito isto, siga o processo abaixo:
 
 <br>
 
+##  **Melhorias Futuras - API Saudex -**
+
+- Localizar todos os centros médicos e farmácias por gps;
+
+- Marcar consulta dos pacientes com os médicos endocrinologistas;
+
+- Registrar os produtos e insumos disponíveis nos centros médicos;
+
+- Registrar os produtos da farmácia para pessoas diabéticas;
+
+- Controle de estoque de insumos para pessoas diabéticas nas farmácias.
+
+<br>
+
+<br>
 
 ##  **Referências**
 
