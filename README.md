@@ -281,6 +281,7 @@ Feito isto, siga o processo abaixo:
 
 |  **_{GET}_** | Retornar |
 | ------------------- | :-------------------: |
+| /                        | Mensagem principal de boas-vindas.  |
 | /search/endocrinologists | Lista todos os Centros Médicos que possuem endocrinologistas disponíveis. |
 | /search/supplies | Lista todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
 | /search/healthpost/quantitysupplies | Lista todos os Postos de Saúdes que possuem a mesma quantidade de insumos informada pelo usuário. |
