@@ -21,6 +21,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 - [Melhorias Futuras API Saudex](#melhorias-futuras-api-saudex)
 - [Referências](#referências)
 - [Agradecimentos](#agradecimentos)
+- [Autora](#Autora)
 
 
 <br>
@@ -173,8 +174,8 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 <br>
 <p  align="justify">
 <a  href="https://git-scm.com/"><img  alt="Git version"  src="https://img.shields.io/badge/Git/GitHub-slateblue">
-<a  href="https://nodejs.org/pt-br/"><img  alt="Node version"  src="https://img.shields.io/badge/NodeJS-black">
-<a  href="https://www.mongodb.com/cloud/atlas"><img  alt="Node version"  src="https://img.shields.io/badge/MongoDB%20Atlas-violet"></a>
+<a  href="https://nodejs.org/pt-br/"><img  alt="Node version"  src="https://img.shields.io/badge/NodeJS-violet">
+<a  href="https://www.mongodb.com/cloud/atlas"><img  alt="Node version"  src="https://img.shields.io/badge/MongoDB%20Atlas-slateblue"></a>
 
 ## **Bibliotecas Aplicadas**
 <br>
@@ -183,7 +184,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 <a  href="https://www.npmjs.com/"><img  alt="npm version"  src="https://img.shields.io/badge/npm-6.14.6-slateblue">
 <a  href="https://expressjs.com/pt-br/"><img  alt="Express version"  src="https://img.shields.io/badge/express-4.17.1-slateblue">
 <a  href="https://mongoosejs.com/"><img  alt="Mongoose version"  src="https://img.shields.io/badge/mongoose-5.10.17-slateblue">
-<a  href="https://www.npmjs.com/package/dotenv-safe"><img  alt="Dotenv-safe version"  src="https://img.shields.io/badge/dotenv-8.2.0-black">
+<a  href="https://www.npmjs.com/package/dotenv-safe"><img  alt="Dotenv-safe version"  src="https://img.shields.io/badge/dotenv-8.2.0-slateblue">
 <a  href="https://www.npmjs.com/package/bcryptjs"><img  alt="Bcrypt version"  src="https://img.shields.io/badge/bcrypt-5.0.0-violet">
 <a  href="https://www.npmjs.com/package/jsonwebtoken"><img  alt="Jsonwebtoken version"  src="https://img.shields.io/badge/jsonwebtoken-8.5.1-violet">
 <a  href="https://www.npmjs.com/package/nodemon"><img  alt="Nodemon version"  src="https://img.shields.io/badge/nodemon-2.0.6-violet">
@@ -455,7 +456,7 @@ Feito isto, siga o processo abaixo:
 
 <br>
 
-[inicio](#sumário) 
+[início](#sumário) 
 
    
 
