@@ -434,8 +434,8 @@ Feito isto, siga o processo abaixo:
 ##  **Autora**
 
  - _Desenvoldora da API Saudex, Letícia Desiderio, 21 anos._
-<p align="center">
-<img style= "border: 5px solid #E016ED; border-radius: 9px;" src="assets/leticiadesiderio.jpeg" width="200"></img></p>
+<p align="center" style= "border: 5px solid #E016ED; border-radius: 9px;">
+<img  src="assets/leticiadesiderio.jpeg" width="200"></img></p>
 
 <p style= "margin-top: 2%">
 
