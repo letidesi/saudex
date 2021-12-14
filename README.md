@@ -154,11 +154,13 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 
  - Informando todos os centros médicos registrados. ✅ 
 
+ -  Informando todas as farmácias registradas. ✅ 
+ 
  -  Informando todos os centros médicos que dispõe de médicos endocrinologistas. ✅
  
  - Informando todos os centros médicos que dispõe de insumos para diabetes. ✅
 
- <p p align="center"><img src="assets/saudexapigif.gif"></img></p>
+ <p p align="center"><img src="assets/saudexapi.gif"></img></p>
 
 <br>
 
