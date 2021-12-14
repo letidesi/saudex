@@ -167,26 +167,26 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 <br>
 
 ## **A Linguagem de Programação Executada**
-<p align="justify"><br><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img></p>
+<p align="justify"><br><img src="https://img.shields.io/badge/JavaScript-C71585?style=for-the-badge&logo=javascript&logoColor=black"></img></p>
 
 ## **Tecnologias Utilizadas**
 <br>
 <p  align="justify">
-<a  href="https://git-scm.com/"><img  alt="Git version"  src="https://img.shields.io/badge/Git/GitHub-green">
-<a  href="https://nodejs.org/pt-br/"><img  alt="Node version"  src="https://img.shields.io/badge/NodeJS-green">
-<a  href="https://www.mongodb.com/cloud/atlas"><img  alt="Node version"  src="https://img.shields.io/badge/MongoDB%20Atlas-green"></a>
+<a  href="https://git-scm.com/"><img  alt="Git version"  src="https://img.shields.io/badge/Git/GitHub-slateblue">
+<a  href="https://nodejs.org/pt-br/"><img  alt="Node version"  src="https://img.shields.io/badge/NodeJS-black">
+<a  href="https://www.mongodb.com/cloud/atlas"><img  alt="Node version"  src="https://img.shields.io/badge/MongoDB%20Atlas-violet"></a>
 
 ## **Bibliotecas Aplicadas**
 <br>
 
 <p  align="justify">
-<a  href="https://www.npmjs.com/"><img  alt="npm version"  src="https://img.shields.io/badge/npm-6.14.6-orange">
-<a  href="https://expressjs.com/pt-br/"><img  alt="Express version"  src="https://img.shields.io/badge/express-4.17.1-orange">
-<a  href="https://mongoosejs.com/"><img  alt="Mongoose version"  src="https://img.shields.io/badge/mongoose-5.10.17-orange">
-<a  href="https://www.npmjs.com/package/dotenv-safe"><img  alt="Dotenv-safe version"  src="https://img.shields.io/badge/dotenv-8.2.0-green">
-<a  href="https://www.npmjs.com/package/bcryptjs"><img  alt="Bcrypt version"  src="https://img.shields.io/badge/bcrypt-5.0.0-green">
-<a  href="https://www.npmjs.com/package/jsonwebtoken"><img  alt="Jsonwebtoken version"  src="https://img.shields.io/badge/jsonwebtoken-8.5.1-green">
-<a  href="https://www.npmjs.com/package/nodemon"><img  alt="Nodemon version"  src="https://img.shields.io/badge/nodemon-2.0.6-green">
+<a  href="https://www.npmjs.com/"><img  alt="npm version"  src="https://img.shields.io/badge/npm-6.14.6-slateblue">
+<a  href="https://expressjs.com/pt-br/"><img  alt="Express version"  src="https://img.shields.io/badge/express-4.17.1-slateblue">
+<a  href="https://mongoosejs.com/"><img  alt="Mongoose version"  src="https://img.shields.io/badge/mongoose-5.10.17-slateblue">
+<a  href="https://www.npmjs.com/package/dotenv-safe"><img  alt="Dotenv-safe version"  src="https://img.shields.io/badge/dotenv-8.2.0-black">
+<a  href="https://www.npmjs.com/package/bcryptjs"><img  alt="Bcrypt version"  src="https://img.shields.io/badge/bcrypt-5.0.0-violet">
+<a  href="https://www.npmjs.com/package/jsonwebtoken"><img  alt="Jsonwebtoken version"  src="https://img.shields.io/badge/jsonwebtoken-8.5.1-violet">
+<a  href="https://www.npmjs.com/package/nodemon"><img  alt="Nodemon version"  src="https://img.shields.io/badge/nodemon-2.0.6-violet">
 </a>
 </p>
 
@@ -429,6 +429,31 @@ Feito isto, siga o processo abaixo:
 
 <br>
 
+<br>
+
+##  **Autora**
+
+ - _Desenvoldora da API Saudex, Letícia Desiderio, 21 anos._
+<p align="center">
+<img style= "border: 5px solid #E016ED; border-radius: 9px;" src="assets/leticiadesiderio.jpeg" width="200"></img></p>
+
+<p style= "margin-top: 2%">
+
+💘 _Meu projeto é público para quem desejar contribuir, saiba que você é muito bem-vinde! Qualquer dúvida ou sugestão, sinta-se à vontade para me chamar!_ 😉
+
+<p style= "margin-top: 3%">
+
+<div>
+  <a href="https://www.linkedin.com/in/leticiardesiderio/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-slateblue?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
+  <a href = "mailto:letidesiderio20@gmail.com"><img src="https://img.shields.io/badge/Gmail-FF1493?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://twitter.com/preta_bey" target="_blank"><img src="https://img.shields.io/badge/Twitter-slateblue?style=for-the-badge&logo=twitter&logoColor=white" target="_blank"></a>
+  <a href="https://www.instagram.com/letidesiderio/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-FF1493?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+</div>
+
+
+<p style= "margin-top: 18%">
+
+<br>
 
 [inicio](#sumário) 
 
