@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv-safe").config();
 const db = require("./database/mongoConfig");
 
+const indexRoutes = require("./routes/indexRoutes");
 const admRoutes = require("./routes/admRoutes");
 const hospitalRoutes = require("./routes/hospitalRoutes");
 const healthPostRoutes = require("./routes/healthPostRoutes");
@@ -14,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
+app.use("/", indexRoutes);
 app.use("/saudex", admRoutes);
 app.use("/saudex", hospitalRoutes);
 app.use("/saudex", healthPostRoutes);
