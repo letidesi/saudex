@@ -435,7 +435,7 @@ Feito isto, siga o processo abaixo:
 
  - _Desenvoldora da API Saudex, Letícia Desiderio, 21 anos._
 <p align="center">
-<img src="assets/leticiadesiderio.jpeg" width="200"></img></p>
+<img src="assets/leticiadesiderio.jpeg" width="350" height="290"></img></p>
 
 <p style= "margin-top: 2%">
 
