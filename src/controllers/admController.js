@@ -1,5 +1,7 @@
 const AdmSchema = require("../models/admSchema");
 const mongoose = require("mongoose");
+const { hashPassword, hasPassword } = require("../helpers/auth");
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const secret = process.env.SECRET;
@@ -57,31 +59,34 @@ const createAdm = async (req, res) => {
           "This e-mail has already been registered, please use another e-mail.",
       });
     }
-    const salt = await bcrypt.genSalt(12); 
-    const passwordHash = await bcrypt.hash(password, salt); 
+
     const newAdmin = new AdmSchema({
       _id: new mongoose.Types.ObjectId(),
       username: req.body.username,
       email: req.body.email,
-      password: passwordHash,
+      password: req.body.password,
       terms_of_use: req.body.terms_of_use,
     });
+
+    const passwordHashed = await hasPassword(newAdmin.password, res);
+    newAdmin.password = passwordHashed;
+
     if (!terms_of_use) {
       return res.status(406).json({
         message:
           "Sorry, unfortunately if you inform us that you do not accept our terms of use, we will not be able to complete your registration.",
       });
     }
+
     const savedAdmin = await newAdmin.save();
     res.status(200).json({
       message: "Administrator successfully registered! (:",
       savedAdmin,
     });
   } catch (e) {
-    res.status(500),
-      json({
-        message: e.message,
-      });
+    res.status(500).json({
+      message: e.message,
+    });
   }
 };
 
@@ -140,7 +145,7 @@ const searchAdminById = async (req, res) => {
   } catch (e) {
     res.status(500).json({
       message:
-        "Error, this administrator does not exist, please register or try again later!" + 
+        "Error, this administrator does not exist, please register or try again later!" +
         e.message,
     });
   }
@@ -197,25 +202,6 @@ const deleteAdmById = async (req, res) => {
   }
 };
 
-function checkToken(req, res, next) {
-  const authHeader = req.headers["authorization"];
-  const token = authHeader && authHeader.split(" ")[1];
-
-  if (!token) {
-    return res.status(401).json({
-      message: "Access denied!",
-    });
-  }
-  try {
-    const secret = process.env.SECRET;
-    jwt.verify(token, secret);
-    next();
-  } catch (e) {
-    return res.status(500).json({
-      message: "Please enter a valid token!",
-    });
-  }
-}
 module.exports = {
   message_one,
   findAllAdm,
@@ -224,5 +210,4 @@ module.exports = {
   searchAdminById,
   updateAdmById,
   deleteAdmById,
-  checkToken,
 };
