@@ -283,19 +283,19 @@ Feito isto, siga o processo abaixo:
 |  **_{GET}_** | Retornar |
 | ------------------- | :-------------------: |
 | /                        | Mensagem principal de boas-vindas.  |
-| /search/endocrinologists | Lista todos os Centros Médicos que possuem endocrinologistas disponíveis. |
-| /search/supplies | Lista todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
-| /search/healthpost/quantitysupplies | Lista todos os Postos de Saúdes que possuem a mesma quantidade de insumos informada pelo usuário. |
-| /search/healthpost/attendancepassword | Lista todos os Postos de Saúdes que possuem a mesma quantidade de senha de atendimento informada pelo usuário. |
-| /search/healthpost/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo usuário. |
-| /search/hospital/quantitysupplies | Lista todos os Hospitais que possuem a mesma quantidade de insumos informada pelo usuário. |
-| /search/hospital/attendancepassword | Lista todos os Hospitais que possuem a mesma quantidade de senha de atendimento informada pelo usuário.
-| /search/hospital/name | Lista todos os Hospitais que possuem o mesmo nome informado pelo usuário. |
+| /search/endocrinologists?has_endocrinologist_doctors=true| Lista todos os Centros Médicos que possuem endocrinologistas disponíveis. |
+| /search/supplies?availability_of_supplies_for_diabetic_people=true | Lista todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
+| /search/healthpost/quantitysupplies?how_many_supplies_are_available_for_diabetics="Inserir aqui a quantidade de insumos desejada" | Lista todos os Postos de Saúdes que possuem a mesma quantidade de insumos informada pelo usuário. |
+| /search/healthpost/attendancepassword?how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist="Inserir aqui a quantidade de senha desejada"| Lista todos os Postos de Saúdes que possuem a mesma quantidade de senha de atendimento informada pelo usuário. |
+| /search/healthpost/name?health_post_name="Inserir aqui o nome do posto de saúde desejado"| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo usuário. |
+| /search/hospital/quantitysupplies?how_many_supplies_are_available_for_diabetics="Inserir aqui a quantidade de insumos desejada" | Lista todos os Hospitais que possuem a mesma quantidade de insumos informada pelo usuário. |
+| search/hospital/attendancepassword?how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist="Inserir aqui a quantidade de senha desejada" | Lista todos os Hospitais que possuem a mesma quantidade de senha de atendimento informada pelo usuário.
+| /search/hospital/name?hospital_name="Inserir aqui o nome do hospital desejado" | Lista todos os Hospitais que possuem o mesmo nome informado pelo usuário. |
 | /pharmacy/popularprogram | Lista todas as Farmácias que são credenciadas no "Programa Farmácia Popular". |
-| /search/pharmacy/name| Lista todas as Farmácias que possuem o mesmo nome informado pelo usuário. |
-| /search/healthpost/municipality | Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo usuário. |
-| /search/hospital/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo usuário. |
-| /search/pharmacy/municipality | Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário. |
+| /search/pharmacy/name?pharmacy_name="Inserir aqui o nome desejado"| Lista todas as Farmácias que possuem o mesmo nome informado pelo usuário. |
+| search/healthpost/municipality?municipality="Inserir aqui o nome do município desejado" | Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo usuário. |
+| /search/hospital/municipality?municipality="Inserir aqui o nome do município desejado" | Lista todos os Hospitais que estão localizados no mesmo município informado pelo usuário. |
+| /search/pharmacy/municipality?municipality="Inserir aqui o nome do município desejado"| Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário. |
 | /all | Lista todos os centros médicos que foram registrados.
 
 
@@ -311,16 +311,16 @@ Feito isto, siga o processo abaixo:
 | /adm | Lista todos os Admnistradores cadastrados. |
 | /admin/:id | Procura o Admnistrador do id requisitado pelo Admnistrador logado.|
 | /healthpost | Lista de todos os Postos de Saúde cadastrados. |
-| /healthpost/search/name| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo administrante. |
-| /healthpost/search/municipality | Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo administrante.  |
+| /healthpost/search/name?health_post_name="Inserir aqui o nome desejado"| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo administrante. |
+| /healthpost/search/municipality?municipality="Inserir aqui o município desejado"| Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo administrante.  |
 | /healthpost/search/:id | Procura o Posto de Saúde do id requisitado pelo administrante. |
 | /hospital | Lista de todos os Hospitais cadastrados. |
-| /hospital/search/name | Lista todos os Hospitais que possuem o mesmo nome informado pelo administrante. |
-| /hospital/search/municipality | Lista todos os Hospitais que estão localizados no mesmo município informado pelo admnistrante.  |
+| /hospital/search/name?hospital_name="Inserir aqui o nome desejado" | Lista todos os Hospitais que possuem o mesmo nome informado pelo administrante. |
+| /hospital/search/municipality/?municipality="Inserir aqui o nome do município desejado" | Lista todos os Hospitais que estão localizados no mesmo município informado pelo admnistrante.  |
 | /hospital/search/:id | Procura Hospital por id requisitado pelo administrante. |
 | /pharmacy | Lista de todas as Farmácias cadastradas. |
-| /pharmacy/search/name | Lista todas as Farmácias que possuem o mesmo nome informado pelo administrante. |
-| /pharmacy/search/municipality | Lista todas as Farmácias que estão localizados no mesmo município informado pelo admnistrante.  |
+| /pharmacy/search/name?pharmacy_name="Inserir aqui o nome desejado" | Lista todas as Farmácias que possuem o mesmo nome informado pelo administrante. |
+| /pharmacy/search/municipality?municipality="Inserir aqui o município desejado" | Lista todas as Farmácias que estão localizados no mesmo município informado pelo admnistrante.  |
 | /pharmacy/search/:id | Procura Farmácia por id requisitado pelo administrante.
 
 <br>
@@ -387,7 +387,7 @@ Feito isto, siga o processo abaixo:
 
 ##  **Referências**
 
-<h3>
+
 
  > <a href="https://bandrio.band.uol.com.br/noticias/1000001005473/pacientes-diabeticos-ficam-sem-insulina-do-estado-do-rio-de-janeiro-.html"><p align="center">Band</p></a>
 
@@ -401,7 +401,7 @@ Feito isto, siga o processo abaixo:
 
   > <a href="https://g1.globo.com/to/tocantins/noticia/2021/08/07/moradores-denunciam-falta-de-insumos-e-medicamentos-na-rede-publica-de-saude-em-palmas.ghtml"><p align="center">g1 - São Paulo</p></a>
 
-</h3>
+
 
 
 <br>
