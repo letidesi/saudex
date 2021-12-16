@@ -310,9 +310,9 @@ Feito isto, siga o processo abaixo:
 | **_{GET}_** | Retornar |
 | ------------------- | :-------------------: |
 | /message | Informar mensagem para administradores. |
-| /adm | Lista todos os Admnistradores cadastrados. |
-| /admin/:id | Procura o Admnistrador do id requisitado pelo Admnistrador logado.|
-| /healthpost | Lista de todos os Postos de Saúde cadastrados. |
+| /adm | Lista todos os Administradores cadastrados. |
+| /admin/:id | Procura o Administrador do id requisitado pelo administrador logado.|
+| /healthpost | Lista todos os Postos de Saúde cadastrados. |
 | /healthpost/search/name?health_post_name="Inserir o nome"| Lista todos os Postos de Saúde que possuem o mesmo nome informado pelo administrante. |
 | /healthpost/search/municipality?municipality="Inserir o município"| Lista todos os Postos de Saúde que estão localizados no mesmo município informado pelo administrante.  |
 | /healthpost/search/:id | Procura o Posto de Saúde do id requisitado pelo administrante. |
@@ -322,7 +322,7 @@ Feito isto, siga o processo abaixo:
 | /hospital/search/:id | Procura Hospital por id requisitado pelo administrante. |
 | /pharmacy | Lista de todas as Farmácias cadastradas. |
 | /pharmacy/search/name?pharmacy_name="Inserir o nome" | Lista todas as Farmácias que possuem o mesmo nome informado pelo administrante. |
-| /pharmacy/search/municipality?municipality="Inserir aqui o município" | Lista todas as Farmácias que estão localizados no mesmo município informado pelo admnistrante.  |
+| /pharmacy/search/municipality?municipality="Inserir aqui o município" | Lista todas as Farmácias que estão localizados no mesmo município informado pelo administrante.  |
 | /pharmacy/search/:id | Procura Farmácia por id requisitado pelo administrante.
 
 <br>
