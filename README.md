@@ -392,19 +392,17 @@ Feito isto, siga o processo abaixo:
 
 
 
- > <a href="https://bandrio.band.uol.com.br/noticias/1000001005473/pacientes-diabeticos-ficam-sem-insulina-do-estado-do-rio-de-janeiro-.html"><p align="center">Band</p></a>
+ > <a href="https://bandrio.band.uol.com.br/noticias/1000001005473/pacientes-diabeticos-ficam-sem-insulina-do-estado-do-rio-de-janeiro-.html">Band</a>
 
- > <a href="http://www.metodista.br/rronline/diabeticos-enfrentam-dificuldades-para-receber-insumos-durante-a-pandemia-aponta-estudo"><p align="center">Universidade Metodista de São Paulo</p></a>
+ > <a href="http://www.metodista.br/rronline/diabeticos-enfrentam-dificuldades-para-receber-insumos-durante-a-pandemia-aponta-estudo">Universidade Metodista de São Paulo</a>
 
- > <a href="http://g1.globo.com/bom-dia-brasil/noticia/2017/02/diabeticos-nao-encontram-insulina-em-hospitais-da-rede-publica.html"><p align="center">Bom Dia Brasil</p></a>
+ > <a href="http://g1.globo.com/bom-dia-brasil/noticia/2017/02/diabeticos-nao-encontram-insulina-em-hospitais-da-rede-publica.html">Bom Dia Brasil</a>
 
-  > <a href="https://g1.globo.com/profissao-reporter/noticia/2021/08/11/mae-aplica-insulina-vencida-na-filha-com-diabetes-por-falta-de-medicamento-e-a-que-tem.ghtml"><p align="center">Profissão Repórter</p></a>
+  > <a href="https://g1.globo.com/profissao-reporter/noticia/2021/08/11/mae-aplica-insulina-vencida-na-filha-com-diabetes-por-falta-de-medicamento-e-a-que-tem.ghtml">Profissão Repórter</a>
 
-  > <a href="http://g1.globo.com/rio-de-janeiro/noticia/2014/02/pacientes-diabeticos-sofrem-com-falta-de-insulina-em-sao-goncalo-rj.html"><p align="center">g1 - Rio de Janeiro</p></a>
+  > <a href="http://g1.globo.com/rio-de-janeiro/noticia/2014/02/pacientes-diabeticos-sofrem-com-falta-de-insulina-em-sao-goncalo-rj.html">g1 - Rio de Janeiro</a>
 
-  > <a href="https://g1.globo.com/to/tocantins/noticia/2021/08/07/moradores-denunciam-falta-de-insumos-e-medicamentos-na-rede-publica-de-saude-em-palmas.ghtml"><p align="center">g1 - São Paulo</p></a>
-
-
+  > <a href="https://g1.globo.com/to/tocantins/noticia/2021/08/07/moradores-denunciam-falta-de-insumos-e-medicamentos-na-rede-publica-de-saude-em-palmas.ghtml">g1 - São Paulo</a>
 
 
 <br>
