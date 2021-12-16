@@ -280,10 +280,10 @@ Feito isto, siga o processo abaixo:
     Nome da rota principal = /saudex
 
 
-|  **_{GET}_** | Retornar |
+|  **_{GET}_** |   Retornar |
 | ------------------- | :-------------------: |
 | /                        | Mensagem principal de boas-vindas.  |
-| /search/endocrinologists?has_endocrinologist_doctors=true | Lista todos os Centros Médicos que possuem endocrinologistas disponíveis. |
+| / | Lista todos os Centros Médicos que possuem endocrinologistas disponíveis. |
 | /search/supplies?availability_of_supplies_for_diabetic_people=true | Lista todos os Centros Médicos que possuem insumos disponíveis para pessoas diabéticas. |
 | /search/healthpost/quantitysupplies?how_many_supplies_are_available_for_diabetics="Inserir quantidade de insumos" | Lista todos os Postos de Saúdes que possuem a mesma quantidade de insumos informada pelo usuário. |
 | /search/healthpost/attendancepassword?how_many_tickets_are_available_to_make_an_appointment_with_an_endocrinologist="Inserir quantidade de senha"| Lista todos os Postos de Saúdes que possuem a mesma quantidade de senha de atendimento informada pelo usuário. |
