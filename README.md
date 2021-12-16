@@ -299,12 +299,13 @@ Feito isto, siga o processo abaixo:
 | /search/pharmacy/municipality?municipality="Inserir o nome do município" | Lista todos as Farmácias que estão localizados no mesmo município informado pelo usuário. |
 | /all | Lista todos os centros médicos que foram registrados.
 
-<h6>
+</h6>
 
 ##  **Rotas Privadas**
 
      Nome da rota principal = /saudex
         
+<h6>
 
 | **_{GET}_** | Retornar |
 | ------------------- | :-------------------: |
@@ -365,6 +366,7 @@ Feito isto, siga o processo abaixo:
 | /hospital/delete/:id | Deletar os registros dos Hospitais. |
 | /pharmacy/delete/:id | Deletar os registros das Farmácias. |
 
+</h6>
 
 <br>
 
