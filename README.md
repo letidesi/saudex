@@ -72,7 +72,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 
 <br>
 
-> Será possivel também encontrar médicos endocrinologistas, saber as quantidades de insumos disponíveis e informar as quantidades de senhas disponibilizadas para o atendimento.
+> Será possível também encontrar médicos endocrinologistas, saber as quantidades de insumos disponíveis e informar as quantidades de senhas disponibilizadas para o atendimento.
 
 <br>
 
@@ -199,7 +199,7 @@ On14 - Backend {reprograma} 💜 API Saudex - Projeto Final 💜 Status: **concl
 
  Antes de começar, se for da sua preferência criar modificações em nosso código, será necessário realizar o download e concluir instalação do  <a href="https://code.visualstudio.com/download">Visual Studio Code</a> e <a href="https://nodejs.org/en/download/">Node.js.</a>
 Para verificar se as modificações foram realizadas com sucesso, deixaremos o link para instalação de um banco de dados NoSQL, preferencialmente, o <a href="https://www.mongodb.com/try/download/community">MongoDB.</a>
-Deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e comparatilhar APIs, são eles: o   <a href="https://www.postman.com/downloads/">Postman</a> e o </a>  <a href="https://insomnia.rest/download">Insomnia.</a>
+Deixaremos disponíveis dois links de nossa preferência de APIs que serão capazes de testar, criar e compartilhar APIs, são eles: o   <a href="https://www.postman.com/downloads/">Postman</a> e o </a>  <a href="https://insomnia.rest/download">Insomnia.</a>
 
 **IMPORTANTE**: Sempre escolha versão de acordo com o seu sistema, não se esqueça!
 
@@ -233,7 +233,7 @@ Feito isto, siga o processo abaixo:
 
       cd saudex
 
-- Após entrar na pasta da API Saudex, instale todas as depedências:
+- Após entrar na pasta da API Saudex, instale todas as dependências:
 
       npm install ou npm i
 
@@ -318,7 +318,7 @@ Feito isto, siga o processo abaixo:
 | /healthpost/search/:id | Procura o Posto de Saúde do id requisitado pelo administrante. |
 | /hospital | Lista de todos os Hospitais cadastrados. |
 | /hospital/search/name?hospital_name="Inserir o nome" | Lista todos os Hospitais que possuem o mesmo nome informado pelo administrante. |
-| /hospital/search/municipality/?municipality="Inserir o nome do município" | Lista todos os Hospitais que estão localizados no mesmo município informado pelo admnistrante.  |
+| /hospital/search/municipality/?municipality="Inserir o nome do município" | Lista todos os Hospitais que estão localizados no mesmo município informado pelo administrante.  |
 | /hospital/search/:id | Procura Hospital por id requisitado pelo administrante. |
 | /pharmacy | Lista de todas as Farmácias cadastradas. |
 | /pharmacy/search/name?pharmacy_name="Inserir o nome" | Lista todas as Farmácias que possuem o mesmo nome informado pelo administrante. |
@@ -416,7 +416,7 @@ Feito isto, siga o processo abaixo:
  Muitas pessoas me ajudaram na criação deste projeto e no alcance deste objetivo e representaram um alicerce colossal e extraordinário, sou extremamente grata a elas pela participação durante as semanas que trabalhei nele: </p>
 <p> A Maria Doroteia e ao Mário Vilmar, meus pais, obrigada por todo o suporte, amparo, e ter acreditado sempre no meu processo.
 <p> A minha querida prima <a href="https://www.instagram.com/may_desiderio/">Mayara Desiderio</a>, a minha doce Samara Thomaz, a minha segunda "mãe" <a href="https://www.instagram.com/arina_desouza/p/B2uGhalB6Zp/?utm_medium=copy_link"> Àrina Valtiery</a> e ao <a href="https://www.instagram.com/ctorsoares/?utm_medium=copy_link">Victor Soares</a>, pela paciência, apoio, por permanecerem sempre comigo nos bons e maus momentos e tornaram-se  minha segunda família.</p>
-<p> A todas minhas colegas e amigas que fizeram parte da <a href="https://www.linkedin.com/company/reprogramabr/">{Reprograma}</a> junto comigo, gostaria de, particulamente, agradecer a <a href="https://www.linkedin.com/in/amanda-santos-b50200165/">Amanda Leal</a> pela assistência emocional e <a href="https://www.linkedin.com/in/xeniabarreto">Xênia Barreto</a> pelo auxílio no momento de codar.</p>
+<p> A todas minhas colegas e amigas que fizeram parte da <a href="https://www.linkedin.com/company/reprogramabr/">{Reprograma}</a> junto comigo, gostaria de, particularmente, agradecer a <a href="https://www.linkedin.com/in/amanda-santos-b50200165/">Amanda Leal</a> pela assistência emocional e <a href="https://www.linkedin.com/in/xeniabarreto">Xênia Barreto</a> pelo auxílio no momento de codar.</p>
 <p> Por último e não menos importante, agradeço também as minhas professoras e monitoras que me orientaram a cada momento deste projeto.
 
 
@@ -427,7 +427,7 @@ Feito isto, siga o processo abaixo:
 <br>
 <br>
 
-<h3 align="center">Projeto especialmente dedicado à minha vózinha, que você brilhe onde quer que esteja, te amamos. 🖤 </h4>
+<h3 align="center">Projeto especialmente dedicado à minha vovozinha., que você brilhe onde quer que esteja, te amamos. 🖤 </h4>
 
 <br>
 
@@ -435,7 +435,7 @@ Feito isto, siga o processo abaixo:
 
 ##  **Autora**
 
- - _Desenvoldora da API Saudex, Letícia Desiderio, 21 anos._
+ - _Desenvolvedora da API Saudex, Letícia Desiderio, 21 anos._
 <p align="center">
 <img src="assets/leticiadesiderio.jpeg" width="350" height="290"></img></p>
 
